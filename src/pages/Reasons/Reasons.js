@@ -20,11 +20,11 @@ const Reasons = () => {
   const [itemedited, setitemedited] = useState({});
   const [itemadded, setitemadded] = useState({
     text: "",
-    text_ar: "",
+    text_ar: ""
   });
   const [deleteloadig, setdeleteloading] = useState({
     id: null,
-    loading: false,
+    loading: false
   });
   const [getdataOriginal, setgetdataOriginal] = useState([]);
   const [itemid, setitemid] = useState("");
@@ -34,17 +34,17 @@ const Reasons = () => {
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "السبب بالانجليزيه" : "English Arabic",
       dataIndex: "text",
-      key: "text",
+      key: "text"
     },
     {
       title: language == "ar" ? "السبب بالعربيه" : "Arabic Arabic",
       dataIndex: "text_ar",
-      key: "text",
+      key: "text"
     },
     {
       title: language == "ar" ? "أوامر" : "Edit",
@@ -57,7 +57,7 @@ const Reasons = () => {
               alignItems: "center",
               justifyContent: "center",
               flexWrap: "wrap",
-              rowGap: "4px",
+              rowGap: "4px"
             }}
           >
             <img
@@ -76,7 +76,7 @@ const Reasons = () => {
                 onClick={() => {
                   setdeleteloading({
                     id: record.id,
-                    loading: true,
+                    loading: true
                   });
                   handledelete(record.id);
                 }}
@@ -87,12 +87,12 @@ const Reasons = () => {
             )}
           </div>
         );
-      },
-    },
+      }
+    }
   ];
   const handledelete = (id) => {
     const data_send = {
-      id,
+      id
     };
     // console.log(data_send);
     axios
@@ -132,7 +132,7 @@ const Reasons = () => {
       .finally(() => {
         setdeleteloading({
           id: null,
-          loading: false,
+          loading: false
         });
       });
   };
@@ -141,7 +141,7 @@ const Reasons = () => {
     const data_send = {
       id: itemedited.id,
       text_ar: itemedited.text_ar,
-      text: itemedited.text,
+      text: itemedited.text
     };
     // console.log(data_send)
     axios
@@ -167,7 +167,7 @@ const Reasons = () => {
     setaddloading(true);
     const data_send = {
       text_ar: itemadded.text_ar,
-      text: itemadded.text,
+      text: itemadded.text
     };
     // console.log(data_send)
     axios
@@ -230,7 +230,7 @@ const Reasons = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "add"}</h4>
@@ -255,7 +255,7 @@ const Reasons = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);

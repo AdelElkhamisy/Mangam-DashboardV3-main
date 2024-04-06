@@ -135,7 +135,7 @@ function Order_History() {
           producing_company: item.products[0].producing_company || "",
           store: item.products[0].store || "",
           payementId: item.payementId || "",
-          userId: item.userId || "",
+          userId: item.userId || ""
         };
         for (let i = 0; i < item.products[0]?.colors.length; i++) {
           newobj[`color${i + 1}`] = item.products[0]?.colors[i].color || "";
@@ -176,7 +176,7 @@ function Order_History() {
   const columns = [
     {
       title: language == "ar" ? "رقم الطلب" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     // {
     //   title: language=='ar'?"الدرجه":"Grade",
@@ -188,19 +188,19 @@ function Order_History() {
         return (
           <span>{moment(record.createdAt).format("YYYY-MM-DD hh:mm:ss")}</span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "وسيلة الدفع" : "Payment Method",
-      dataIndex: "payment_method",
+      dataIndex: "payment_method"
     },
     {
       title: language == "ar" ? "رقم عملية الدفع" : "Payment Id",
-      dataIndex: "payementId",
+      dataIndex: "payementId"
     },
     {
       title: language == "ar" ? "معرف المستخدم" : "User Id",
-      dataIndex: "userId",
+      dataIndex: "userId"
     },
     {
       title: language == "ar" ? "وسيلة الشحن" : "Shipping Method",
@@ -211,7 +211,7 @@ function Order_History() {
             <span>{record?.shipping?.title}</span>
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "الحاله" : "Status",
@@ -229,14 +229,14 @@ function Order_History() {
             {record.status}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "سعر الطلب" : "Order Price",
       key: "total_price",
       render: (_, record) => {
         return <p>{record.grand_price}$</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "عرض" : "Show",
@@ -253,7 +253,7 @@ function Order_History() {
             {language == "ar" ? "عرض" : "Show"}
           </button>
         );
-      },
+      }
     },
     // {
     //   title: language=='ar'?"التخزين":"Storage",
@@ -286,7 +286,7 @@ function Order_History() {
             />
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "تحديد" : "Select",
@@ -299,7 +299,7 @@ function Order_History() {
             style={{
               width: "20px",
               height: "20px",
-              cursor: "pointer",
+              cursor: "pointer"
             }}
             checked={record.checked}
             type="checkbox"
@@ -307,8 +307,8 @@ function Order_History() {
             id=""
           />
         );
-      },
-    },
+      }
+    }
     // deliveryAddress
   ];
   const closeEdit = () => {
@@ -426,7 +426,7 @@ function Order_History() {
                 gap: "10px",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -444,7 +444,7 @@ function Order_History() {
                   borderRadius: "10px",
                   border: "1px solid #ccc",
                   margin: "10px auto",
-                  outline: "none",
+                  outline: "none"
                 }}
                 onChange={(e) => {
                   searchType(e.target.value);
@@ -464,7 +464,7 @@ function Order_History() {
                 display: "flex",
                 margin: "10px 0px",
                 justifyContent: "space-between",
-                width: "100%",
+                width: "100%"
               }}
             >
               <div
@@ -570,7 +570,7 @@ function Order_History() {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   type="date"
                   onChange={(e) => {
@@ -587,7 +587,7 @@ function Order_History() {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   onChange={(e) => {
                     settodate(e.target.value);
@@ -637,7 +637,7 @@ function Order_History() {
                       setEdditted,
                       Edditted,
                       setShowEditOrderData,
-                      setshowchangestatus,
+                      setshowchangestatus
                     });
                   }}
                 >

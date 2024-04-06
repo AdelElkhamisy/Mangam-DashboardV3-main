@@ -24,7 +24,7 @@ import {
   hideShowProduct,
   offer_input,
   selectProducts,
-  setItem_s,
+  setItem_s
 } from "../products/functions";
 import "../products/style.css";
 // AdapterMoment
@@ -61,21 +61,21 @@ const OfferProducts = () => {
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "اسم المنتج" : "Name",
       render: (_, record) => {
         return <p>{record?.products[0]?.title}</p>;
       },
-      key: "name",
+      key: "name"
     },
     {
       title: language == "ar" ? "اسم المنتج بالعربيه" : "Arabic Name",
       render: (_, record) => {
         return <p>{record?.products[0]?.title_ar}</p>;
       },
-      key: "title_ar",
+      key: "title_ar"
     },
     {
       title: language == "ar" ? "التاريخ" : "Date",
@@ -84,21 +84,21 @@ const OfferProducts = () => {
         return (
           <span>{moment(record.createdAt).format("YYYY-MM-DD hh:mm:ss")}</span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "رقم النموذج" : "Model Number",
       render: (_, record) => {
         return <p>{record?.products[0]?.model_number}</p>;
       },
-      key: "model_number",
+      key: "model_number"
     },
     {
       title: language == "ar" ? "الشركه" : "Company",
       render: (_, record) => {
         return <p>{record.products[0]?.producing_company}</p>;
       },
-      key: "producing_company",
+      key: "producing_company"
     },
     {
       title: language == "ar" ? "الفئه" : "Category",
@@ -112,12 +112,12 @@ const OfferProducts = () => {
           </p>
         );
       },
-      key: "category",
+      key: "category"
     },
     {
       title: language == "ar" ? "حالة العرض" : "Status",
       dataIndex: language == "ar" ? "status_ar" : "Status",
-      key: "status",
+      key: "status"
     },
     // {
     //   title: language == 'ar' ? "لون المنتج" : "Product Color",
@@ -145,7 +145,7 @@ const OfferProducts = () => {
             {moment(record.will_av_after).format("YYYY-MM-DD hh:mm:ss")}
           </span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "النوع" : "Type",
@@ -156,7 +156,7 @@ const OfferProducts = () => {
             {record?.isTendered ? "ضمن المناقصة" : "ليس ضمن المناقصة"}
           </span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "متوفر لوقت" : "Avilable For",
@@ -169,7 +169,7 @@ const OfferProducts = () => {
             {moment(`${record.will_av_for}`).format("YYYY-MM-DD hh:mm:ss")}
           </span>
         );
-      },
+      }
     },
     // {
     //   title: language == 'ar' ? "الخصائص" : "Properties",
@@ -198,7 +198,7 @@ const OfferProducts = () => {
       render: (_, record) => {
         /* record.will_av_for */
         return <p>{record.store}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "عرض " : "Show",
@@ -220,7 +220,7 @@ const OfferProducts = () => {
             {language == "ar" ? "عرض" : "show"}
           </button>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "إيقاف العرض" : "Stop The Offer",
@@ -239,7 +239,7 @@ const OfferProducts = () => {
             </button>
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أرشفة" : "Archive The Offer",
@@ -258,7 +258,7 @@ const OfferProducts = () => {
             </button>
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أوامر" : "Action",
@@ -271,7 +271,7 @@ const OfferProducts = () => {
               rowGap: "4px",
               alignItems: "center",
               justifyContent: "space-between",
-              flexWrap: "wrap",
+              flexWrap: "wrap"
             }}
           >
             {/* <img
@@ -305,8 +305,8 @@ const OfferProducts = () => {
             />
           </div>
         );
-      },
-    },
+      }
+    }
   ];
 
   const [itemHidden, setItemHidden] = useState();
@@ -333,7 +333,7 @@ const OfferProducts = () => {
     const data_send = {
       item_id: item.id,
       item_old_price: item.price,
-      item_new_price: handleOffer.item_new_price,
+      item_new_price: handleOffer.item_new_price
     };
     axios
       .post(
@@ -396,13 +396,13 @@ const OfferProducts = () => {
     stopped: false,
     available: true,
     startDate: "",
-    endDate: "",
+    endDate: ""
   });
 
   const getoffers = () => {
     setpageloading(true);
     const data_send = {
-      type: "admin",
+      type: "admin"
     };
     axios
       .post("https://api.manjam.shop/v3/offers/select_offers", data_send)
@@ -585,7 +585,7 @@ const OfferProducts = () => {
       maximunJoiners,
       cost,
       tenderEndTime,
-      rate_time,
+      rate_time
     };
     // console.log(data_send);
     axios
@@ -652,7 +652,7 @@ const OfferProducts = () => {
       will_av_for: copiedrecord.will_av_for,
       store: copiedrecord.store,
       offer_id: copiedrecord.id,
-      same: !status ? 1 : 0,
+      same: !status ? 1 : 0
     };
     axios
       .post("https://api.manjam.shop/v3/offers/copy", data_send)
@@ -736,7 +736,7 @@ const OfferProducts = () => {
 
   const handlesearchproduct = (txt) => {
     const data_send = {
-      token: txt,
+      token: txt
     };
     axios
       .post(
@@ -796,7 +796,7 @@ const OfferProducts = () => {
   const handlestopoffer = () => {
     setstoploading(true);
     const data_send = {
-      offer_id: record.id,
+      offer_id: record.id
     };
     // console.log(data_send);
     axios
@@ -824,7 +824,7 @@ const OfferProducts = () => {
       offer_id: record?.id,
       archive: 1,
       success: 0,
-      notes: "",
+      notes: ""
     };
     // console.log(data_send);
     axios
@@ -867,7 +867,7 @@ const OfferProducts = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "Add"}</h4>
@@ -878,7 +878,7 @@ const OfferProducts = () => {
                 style={{
                   cursor: "pointer",
                   fontSize: "22px",
-                  color: "#198754",
+                  color: "#198754"
                 }}
               />
             </div>
@@ -888,7 +888,7 @@ const OfferProducts = () => {
                 gap: "10px",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -906,7 +906,7 @@ const OfferProducts = () => {
                   borderRadius: "10px",
                   border: "1px solid #ccc",
                   margin: "10px auto",
-                  outline: "none",
+                  outline: "none"
                 }}
                 onChange={(e) => {
                   searchType(e.target.value);
@@ -927,7 +927,7 @@ const OfferProducts = () => {
                       setFilters({
                         stopped: e.target.checked,
                         archived: false, // Ensure other options are set to false
-                        success: false,
+                        success: false
                       })
                     }
                   />
@@ -942,7 +942,7 @@ const OfferProducts = () => {
                       setFilters({
                         stopped: false, // Ensure other options are set to false
                         archived: e.target.checked,
-                        success: false,
+                        success: false
                       })
                     }
                   />
@@ -957,7 +957,7 @@ const OfferProducts = () => {
                       setFilters({
                         stopped: false, // Ensure other options are set to false
                         archived: false,
-                        success: e.target.checked,
+                        success: e.target.checked
                       })
                     }
                   />
@@ -1003,13 +1003,13 @@ const OfferProducts = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                flexWrap: "wrap",
+                flexWrap: "wrap"
               }}
             >
               <Select
                 value={filteredstore}
                 style={{
-                  width: "200px",
+                  width: "200px"
                 }}
                 onChange={(e) => {
                   setfilteredstore(e);
@@ -1017,16 +1017,16 @@ const OfferProducts = () => {
                 options={[
                   {
                     value: "all",
-                    label: "All",
+                    label: "All"
                   },
                   {
                     value: "ksa",
-                    label: "Saudi Aribia",
+                    label: "Saudi Aribia"
                   },
                   {
                     value: "uae",
-                    label: "uae",
-                  },
+                    label: "uae"
+                  }
                 ]}
               />
             </div>
@@ -1172,7 +1172,7 @@ const OfferProducts = () => {
               value={store}
               style={{
                 width: "100%",
-                marginBottom: "10px",
+                marginBottom: "10px"
               }}
               onChange={(e) => {
                 // console.log(e)
@@ -1182,19 +1182,19 @@ const OfferProducts = () => {
               {[
                 {
                   value: "uae",
-                  label: language == "ar" ? "الامارات" : "The UAE",
+                  label: language == "ar" ? "الامارات" : "The UAE"
                 },
                 {
                   value: "ksa",
-                  label: language == "ar" ? "السعوديه" : "Saudi Aribia",
+                  label: language == "ar" ? "السعوديه" : "Saudi Aribia"
                 },
                 {
                   value: "uae***ksa",
                   label:
                     language == "ar"
                       ? "الامارات و السعوديه"
-                      : "The UAE and Saudi Aribia",
-                },
+                      : "The UAE and Saudi Aribia"
+                }
               ].map((item) => {
                 return <option value={item.value}>{item.label}</option>;
               })}
@@ -1294,7 +1294,7 @@ const OfferProducts = () => {
               value={selsearchprod}
               style={{
                 width: "100%",
-                marginBottom: "10px",
+                marginBottom: "10px"
               }}
               onChange={(e) => {
                 // console.log(e)
@@ -1451,7 +1451,7 @@ const OfferProducts = () => {
                 gap: "4px",
                 alignItems: "center",
                 width: "fit-content",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               <p style={{ width: "fit-content" }}>
@@ -1473,7 +1473,7 @@ const OfferProducts = () => {
               value={copiedrecord.store}
               style={{
                 width: "100%",
-                marginBottom: "10px",
+                marginBottom: "10px"
               }}
               onChange={(e) => {
                 setcopiedrecord({ ...copiedrecord, store: e.target.value });
@@ -1482,12 +1482,12 @@ const OfferProducts = () => {
               {[
                 {
                   value: "uae",
-                  label: language == "ar" ? "الامارات" : "The UAE",
+                  label: language == "ar" ? "الامارات" : "The UAE"
                 },
                 {
                   value: "ksa",
-                  label: language == "ar" ? "السعوديه" : "Saudi Aribia",
-                },
+                  label: language == "ar" ? "السعوديه" : "Saudi Aribia"
+                }
                 // {
                 //   value: 'uae***ksa',
                 //   label:
@@ -1590,7 +1590,7 @@ const OfferProducts = () => {
               onChange={(e) => {
                 setcopiedrecord({
                   ...copiedrecord,
-                  shippingstatus: e?.target?.checked,
+                  shippingstatus: e?.target?.checked
                 });
               }}
             />
@@ -1604,7 +1604,7 @@ const OfferProducts = () => {
                 onChange={(e) => {
                   setcopiedrecord({
                     ...copiedrecord,
-                    will_av_after: e?._d,
+                    will_av_after: e?._d
                   });
                 }}
               />
@@ -1619,7 +1619,7 @@ const OfferProducts = () => {
                 onChange={(e) => {
                   setcopiedrecord({
                     ...copiedrecord,
-                    will_av_for: e?._d,
+                    will_av_for: e?._d
                   });
                 }}
               />
@@ -1654,7 +1654,7 @@ const OfferProducts = () => {
               style={{
                 width: "100%",
                 marginBottom: "10px",
-                color: "white",
+                color: "white"
               }}
             />
             <label htmlFor="">

@@ -95,7 +95,7 @@ function Form({ inputs, submitFunction, buttonLabel }) {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "space-between",
+                      justifyContent: "space-between"
                     }}
                   >
                     <label htmlFor={item.id}>

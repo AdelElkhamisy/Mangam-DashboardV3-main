@@ -15,7 +15,7 @@ import {
   hideShowProduct,
   offer_input,
   selectProducts,
-  setItem_s,
+  setItem_s
 } from "./functions";
 import Form from "../../components/form";
 import axios from "axios";
@@ -65,39 +65,39 @@ const Products = () => {
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "اسم المنتج" : "Name",
       dataIndex: "title",
-      key: "name",
+      key: "name"
     },
     {
       title: language == "ar" ? "اسم المنتج بالعربيه" : "Arabic Name",
       dataIndex: "title_ar",
-      key: "title_ar",
+      key: "title_ar"
     },
     {
       title: language == "ar" ? "تاريخ الإنتاج" : "Created At",
       key: "created",
       render: (_, record) => {
         return <span>{moment(record.createdAt).format("YYYY-MM-DD")}</span>;
-      },
+      }
     },
     {
       title: language == "ar" ? "رقم النموذج" : "Model Number",
       dataIndex: "model_number",
-      key: "model_number",
+      key: "model_number"
     },
     {
       title: language == "ar" ? "الشركه" : "Company",
       dataIndex: "producing_company",
-      key: "producing_company",
+      key: "producing_company"
     },
     {
       title: language == "ar" ? "الفئه" : "Category",
       dataIndex: "category_name",
-      key: "category",
+      key: "category"
     },
     // {
     //   title: language=='ar'?"لون المنتج":"Product Color",
@@ -115,7 +115,7 @@ const Products = () => {
               alignItems: "center",
               justifyContent: "space-between",
               listStyle: "none",
-              gap: "10px",
+              gap: "10px"
             }}
           >
             {record.colors.map((item, index) => {
@@ -123,7 +123,7 @@ const Products = () => {
             })}
           </ul>
         );
-      },
+      }
     },
     // {
     //   title: language=='ar'?"السعر القديم":"Old Price",
@@ -170,13 +170,13 @@ const Products = () => {
             }}
             style={{
               cursor: "pointer",
-              maxWidth: "100%",
+              maxWidth: "100%"
             }}
             src={require("../../assets/images/features.png")}
             alt=""
           />
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "الحاله" : "Status",
@@ -193,7 +193,7 @@ const Products = () => {
             {record.hidden}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أوامر" : "Action",
@@ -207,7 +207,7 @@ const Products = () => {
               alignItems: "center",
               justifyContent: "space-between",
               flexWrap: "wrap",
-              rowGap: "4px",
+              rowGap: "4px"
             }}
           >
             <img
@@ -216,7 +216,7 @@ const Products = () => {
                 const data_send = {
                   id: record.id,
                   status:
-                    record.hidden == "show" || record.hidden == "Show" ? 1 : 0,
+                    record.hidden == "show" || record.hidden == "Show" ? 1 : 0
                 };
                 // console.log(data_send)
                 axios
@@ -232,7 +232,7 @@ const Products = () => {
                         setBody,
                         query,
                         setgetdataOriginal,
-                        setpageloading,
+                        setpageloading
                       });
                     } else if (res.data.status == 0) {
                       toast.error(res.data.message);
@@ -258,7 +258,7 @@ const Products = () => {
             />
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "تحديد" : "Select",
@@ -271,7 +271,7 @@ const Products = () => {
             style={{
               width: "20px",
               height: "20px",
-              cursor: "pointer",
+              cursor: "pointer"
             }}
             checked={record.checked}
             type="checkbox"
@@ -279,8 +279,8 @@ const Products = () => {
             id=""
           />
         );
-      },
-    },
+      }
+    }
   ];
 
   const [itemHidden, setItemHidden] = useState();
@@ -307,7 +307,7 @@ const Products = () => {
     const data_send = {
       item_id: item.id,
       item_old_price: item.price,
-      item_new_price: handleOffer.item_new_price,
+      item_new_price: handleOffer.item_new_price
     };
     axios
       .post(
@@ -370,7 +370,7 @@ const Products = () => {
       conditions: rowdata.conditions,
       description_ar: rowdata.description_ar,
       title_ar: rowdata.title_ar,
-      conditions_ar: rowdata.conditions_ar,
+      conditions_ar: rowdata.conditions_ar
     };
     console.log(data_send);
     axios
@@ -383,7 +383,7 @@ const Products = () => {
             setBody,
             query,
             setgetdataOriginal,
-            setpageloading,
+            setpageloading
           });
         } else if (res.data.status == 0) {
           toast.error(res.data.message);
@@ -455,7 +455,7 @@ const Products = () => {
           model_number: item.model_number || "",
           price: item.price || "",
           producing_company: item.producing_company || "",
-          store: item.store || "",
+          store: item.store || ""
         };
         for (let i = 0; i < item?.colors.length; i++) {
           newobj[`color${i + 1}`] = item?.colors[i].color || "";
@@ -537,7 +537,7 @@ const Products = () => {
                 gap: "10px",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -555,7 +555,7 @@ const Products = () => {
                   borderRadius: "10px",
                   border: "1px solid #ccc",
                   margin: "10px auto",
-                  outline: "none",
+                  outline: "none"
                 }}
                 onChange={(e) => {
                   searchType(e.target.value);
@@ -575,7 +575,7 @@ const Products = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                margin: "10px 0px",
+                margin: "10px 0px"
               }}
             >
               {/* <div style={{ width:'200px' }}>
@@ -628,7 +628,7 @@ const Products = () => {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   type="date"
                   onChange={(e) => {
@@ -645,7 +645,7 @@ const Products = () => {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   onChange={(e) => {
                     settodate(e.target.value);
@@ -700,7 +700,7 @@ const Products = () => {
                     setBody,
                     query,
                     setgetdataOriginal,
-                    setpageloading,
+                    setpageloading
                   }),
                 { closeModels }
               )
@@ -732,7 +732,7 @@ const Products = () => {
                     setBody,
                     query,
                     setgetdataOriginal,
-                    setpageloading,
+                    setpageloading
                   }),
                 { closeModels }
               );

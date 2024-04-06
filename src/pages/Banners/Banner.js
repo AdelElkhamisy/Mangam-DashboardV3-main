@@ -25,12 +25,12 @@ const Banner = () => {
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "الاسم بالإنجليزيه" : "title In English",
       dataIndex: "title",
-      key: "title",
+      key: "title"
     },
     {
       title: language == "ar" ? "الصوره" : "Image",
@@ -45,22 +45,22 @@ const Banner = () => {
             />
           </div>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "الاسم بالعربيه" : "title In Arabic",
       dataIndex: "title_ar",
-      key: "title_ar",
+      key: "title_ar"
     },
     {
       title: language == "ar" ? "النص بالإنجليزيه" : "text In English",
       dataIndex: "text",
-      key: "text",
+      key: "text"
     },
     {
       title: language == "ar" ? "النص بالعربيه" : "text In Arabic",
       dataIndex: "text_ar",
-      key: "text_ar",
+      key: "text_ar"
     },
     {
       title: language == "ar" ? "النص بالعربيه" : "text In Arabic",
@@ -77,7 +77,7 @@ const Banner = () => {
               : "hidden"}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أوامر" : "Actions",
@@ -90,14 +90,14 @@ const Banner = () => {
               alignItems: "center",
               justifyContent: "space-between",
               flexWrap: "wrap",
-              rowGap: "3px",
+              rowGap: "3px"
             }}
           >
             <img
               onClick={() => {
                 const data_send = {
                   banner_id: record.id,
-                  status: record.hidden == 0 ? 1 : 0,
+                  status: record.hidden == 0 ? 1 : 0
                 };
                 axios
                   .post(
@@ -135,8 +135,8 @@ const Banner = () => {
             />
           </div>
         );
-      },
-    },
+      }
+    }
   ];
   const getbanners = () => {
     axios
@@ -184,7 +184,7 @@ const Banner = () => {
       text: rowdata.text,
       text_ar: rowdata.text_ar,
       imageLink: rowdata.imageLink,
-      link: rowdata.link,
+      link: rowdata.link
     };
     axios
       .post("https://api.manjam.shop/v3/banner/edit_banner", data_send)
@@ -250,7 +250,7 @@ const Banner = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);

@@ -10,7 +10,7 @@ import axios from "axios";
 import {
   AiFillPlusCircle,
   AiOutlineClose,
-  AiOutlinePlus,
+  AiOutlinePlus
 } from "react-icons/ai";
 import "../ProductColors/productcolors.css";
 import { Icon } from "@iconify/react";
@@ -37,7 +37,7 @@ const OfferProductColors = () => {
     available_quantity: "",
     color_code: "",
     color: "",
-    color_ar: "",
+    color_ar: ""
   });
   const [color_id, setcolor_id] = useState("");
   const [image, setimage] = useState(null);
@@ -45,34 +45,34 @@ const OfferProductColors = () => {
   const [offerdata, setofferdata] = useState({
     time_av_after: "",
     time_av_for: "",
-    discount: "",
+    discount: ""
   });
   const columns = [
     {
       title: language == "ar" ? "*" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "اللون" : "color",
-      dataIndex: "color",
+      dataIndex: "color"
     },
     {
       title: language == "ar" ? "كود اللون" : "color code",
       render: (_, record) => {
         return <span>{record.color_code}</span>;
-      },
+      }
     },
     {
       title: language == "ar" ? "السعر" : "price",
-      dataIndex: "price",
+      dataIndex: "price"
     },
     {
       title: language == "ar" ? "السعر القديم" : "Old Price",
-      dataIndex: "price",
+      dataIndex: "price"
     },
     {
       title: language == "ar" ? "الكميه" : "Remaining Quantity",
-      dataIndex: "remainingQuantity",
+      dataIndex: "remainingQuantity"
     },
     {
       title: language == "ar" ? "صوره اللون" : "Color Image",
@@ -84,7 +84,7 @@ const OfferProductColors = () => {
             alt={record?.images[0]?.link}
           />
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "السعر" : "Price",
@@ -97,8 +97,8 @@ const OfferProductColors = () => {
               : record.price * 1 - (record.price * 1) / (record.discount * 1)}
           </p>
         );
-      },
-    },
+      }
+    }
     // {
     //   title:language=='ar'?"أوامر":"Action",
     //   key:"actions",
@@ -141,7 +141,7 @@ const OfferProductColors = () => {
 
   const getProductColors = () => {
     const data_send = {
-      product_id: data.id,
+      product_id: data.id
     };
     // console.log(data_send)
     axios
@@ -188,7 +188,7 @@ const OfferProductColors = () => {
       available_quantity: colorproperty.available_quantity,
       color_code: colorproperty.color_code,
       color: colorproperty.color,
-      color_ar: colorproperty.color_ar,
+      color_ar: colorproperty.color_ar
     };
     // console.log(data_send)
     axios
@@ -223,7 +223,7 @@ const OfferProductColors = () => {
       color_code: colordata.color_code,
       color: colordata.color,
       color_id: colordata.id,
-      color_ar: colordata.color_ar,
+      color_ar: colordata.color_ar
     };
     // console.log(data_send)
     axios
@@ -246,7 +246,7 @@ const OfferProductColors = () => {
     const data_send = {
       ...offerdata,
       product_id: data.id,
-      color_id,
+      color_id
     };
     // console.log(data_send)
     axios
@@ -356,7 +356,7 @@ const OfferProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  discount: e.target.value,
+                  discount: e.target.value
                 });
               }}
             />
@@ -369,7 +369,7 @@ const OfferProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  available_quantity: e.target.value,
+                  available_quantity: e.target.value
                 });
               }}
             />
@@ -380,7 +380,7 @@ const OfferProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  color_code: e.target.value,
+                  color_code: e.target.value
                 });
               }}
             />
@@ -403,7 +403,7 @@ const OfferProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  color_ar: e.target.value,
+                  color_ar: e.target.value
                 });
               }}
             />
@@ -479,7 +479,7 @@ const OfferProductColors = () => {
               onChange={(e) => {
                 setcolordata({
                   ...colordata,
-                  available_quantity: e.target.value,
+                  available_quantity: e.target.value
                 });
               }}
               type="number"

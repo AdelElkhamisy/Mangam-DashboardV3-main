@@ -10,7 +10,7 @@ import axios from "axios";
 import {
   AiFillPlusCircle,
   AiOutlineClose,
-  AiOutlinePlus,
+  AiOutlinePlus
 } from "react-icons/ai";
 import "./productcolors.css";
 import lodash from "lodash/lodash";
@@ -38,7 +38,7 @@ const ProductColors = () => {
     available_quantity: "",
     color_code: "",
     color: "",
-    color_ar: "",
+    color_ar: ""
   });
   const [getdataOriginal, setgetdataOriginal] = useState([]);
   const [image, setimage] = useState(null);
@@ -46,17 +46,17 @@ const ProductColors = () => {
   const columns = [
     {
       title: language == "ar" ? "*" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "اللون" : "color",
-      dataIndex: "color",
+      dataIndex: "color"
     },
     {
       title: language == "ar" ? "كود اللون" : "color code",
       render: (_, record) => {
         return <span>{record.color_code}</span>;
-      },
+      }
     },
     {
       title: language == "ar" ? "صوره اللون" : "Color Image",
@@ -73,7 +73,7 @@ const ProductColors = () => {
               );
             })
           : null;
-      },
+      }
     },
     {
       title: language == "ar" ? "الخصائص" : "Feature",
@@ -89,8 +89,8 @@ const ProductColors = () => {
             alt=""
           />
         );
-      },
-    },
+      }
+    }
     // {
     //   title:language=='ar'?"أوامر":"actions",
     //   key:"actions",
@@ -110,7 +110,7 @@ const ProductColors = () => {
 
   const getProductColors = () => {
     const data_send = {
-      product_id: data.id,
+      product_id: data.id
     };
     // console.log(data_send)
     axios
@@ -158,7 +158,7 @@ const ProductColors = () => {
       available_quantity: colorproperty.available_quantity,
       color_code: colorproperty.color_code,
       color: colorproperty.color,
-      color_ar: colorproperty.color_ar,
+      color_ar: colorproperty.color_ar
     };
     // console.log(data_send)
     axios
@@ -193,7 +193,7 @@ const ProductColors = () => {
       color_code: colordata.color_code,
       color: colordata.color,
       color_id: colordata.id,
-      color_ar: colordata.color_ar,
+      color_ar: colordata.color_ar
     };
     // console.log(data_send)
     axios
@@ -254,7 +254,7 @@ const ProductColors = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "add"}</h4>
@@ -277,7 +277,7 @@ const ProductColors = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -345,7 +345,7 @@ const ProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  discount: e.target.value,
+                  discount: e.target.value
                 });
               }}
             />
@@ -358,7 +358,7 @@ const ProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  available_quantity: e.target.value,
+                  available_quantity: e.target.value
                 });
               }}
             />
@@ -369,7 +369,7 @@ const ProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  color_code: e.target.value,
+                  color_code: e.target.value
                 });
               }}
             />
@@ -392,7 +392,7 @@ const ProductColors = () => {
               onChange={(e) => {
                 setcolorproperty({
                   ...colorproperty,
-                  color_ar: e.target.value,
+                  color_ar: e.target.value
                 });
               }}
             />
@@ -468,7 +468,7 @@ const ProductColors = () => {
               onChange={(e) => {
                 setcolordata({
                   ...colordata,
-                  available_quantity: e.target.value,
+                  available_quantity: e.target.value
                 });
               }}
               type="number"

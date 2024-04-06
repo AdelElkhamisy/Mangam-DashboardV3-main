@@ -58,7 +58,7 @@ const SiteData = () => {
       return_policy_ar: sitedata.return_policy_ar,
       return_policy: sitedata.return_policy,
       about: sitedata.about,
-      about_ar: sitedata.about_ar,
+      about_ar: sitedata.about_ar
     };
     // console.log(data_send)
     axios
@@ -247,7 +247,7 @@ const SiteData = () => {
                 onChange={(e) => {
                   setsitedata({
                     ...sitedata,
-                    return_policy_ar: e.target.value,
+                    return_policy_ar: e.target.value
                   });
                 }}
                 type="text"

@@ -4,7 +4,7 @@ export const RatiosLabels = ({ statics }) => {
   return [
     {
       label: "الفئات",
-      value: statics?.category_count,
+      value: statics?.category_count
     },
     // {
     //   label: "إجمالى العناصر",
@@ -16,24 +16,24 @@ export const RatiosLabels = ({ statics }) => {
     // },
     {
       label: "إجمالى المنتجات",
-      value: statics?.items_count,
-    },
+      value: statics?.items_count
+    }
   ];
 };
 
 export const FilterCates = [
   {
     lable: "الكل",
-    value: "all",
+    value: "all"
   },
   {
     lable: "طعام",
-    value: "food",
+    value: "food"
   },
   {
     lable: "مشروبات",
-    value: "drinks",
-  },
+    value: "drinks"
+  }
 ];
 
 // export const getCategories = async () => {
@@ -44,19 +44,19 @@ export const FilterCates = [
 export const FilterByDate = [
   {
     label: "الاحدث",
-    value: "latest",
+    value: "latest"
   },
   {
     label: "الاقدم",
-    value: "lastes",
-  },
+    value: "lastes"
+  }
 ];
 
 export const selectProducts = async ({
   setBody,
   query,
   setgetdataOriginal,
-  setpageloading,
+  setpageloading
 }) => {
   const pros = await axios
     .get("https://api.manjam.shop/v3/product/getAll?type=admin")
@@ -107,7 +107,7 @@ export const offer_input = [
     id: "item_new_price",
     type: "text",
     name: "item_new_price",
-    placeholder: "اكتب السعر الجديد",
+    placeholder: "اكتب السعر الجديد"
   },
   {
     label: "السعر الحالى",
@@ -116,7 +116,7 @@ export const offer_input = [
     name: "item_old_price",
     placeholder: " السعر الحالى",
     value: oldrprice,
-    disable: true,
+    disable: true
   },
   {
     label: "إسم المنتج",
@@ -125,8 +125,8 @@ export const offer_input = [
     name: "item_name",
     placeholder: " إسم المنتج",
     value: productname,
-    disable: true,
-  },
+    disable: true
+  }
 ];
 let IdPro = "";
 export const setItem_s = ({ item }) => {
@@ -144,7 +144,7 @@ export const edit_input = [
     type: "text",
     name: "item_name",
     placeholder: " إسم المنتج",
-    required: false,
+    required: false
   },
   {
     label: "سعر المنتج",
@@ -152,14 +152,14 @@ export const edit_input = [
     type: "text",
     name: "item_price",
     placeholder: " سعر المنتج",
-    required: false,
+    required: false
   },
   {
     label: "السعر بعد الخصم",
     id: "price_after_discount",
     name: "price_after_discount",
     type: "number",
-    required: false,
+    required: false
   },
   {
     label: "وصف المنتج",
@@ -167,7 +167,7 @@ export const edit_input = [
     type: "text",
     name: "item_description",
     placeholder: " وصف المنتج",
-    required: false,
+    required: false
   },
   {
     label: "العدد المتوفر من المنتج",
@@ -175,14 +175,14 @@ export const edit_input = [
     type: "text",
     name: "number_of_pieces",
     placeholder: "العدد المتوفر من المنتج",
-    required: false,
+    required: false
   },
   {
     label: "أسم الصنف",
     id: "category_id",
     name: "category_id",
-    type: "selectCategory",
-  },
+    type: "selectCategory"
+  }
 ];
 
 export const editProduct = (e, id, reselectedData, { closeModels }) => {

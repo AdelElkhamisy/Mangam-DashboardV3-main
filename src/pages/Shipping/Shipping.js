@@ -28,15 +28,15 @@ const Shipping = () => {
   const columns = [
     {
       title: language == "ar" ? "*" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "الاسم بالانجليزيه" : "title In English",
-      dataIndex: "title",
+      dataIndex: "title"
     },
     {
       title: language == "ar" ? "الاسم بالعربيه" : "title In Arabic",
-      dataIndex: "title_ar",
+      dataIndex: "title_ar"
     },
     // {
     //   title: language=='ar'?"السعر":"price",
@@ -67,8 +67,8 @@ const Shipping = () => {
             alt=""
           />
         );
-      },
-    },
+      }
+    }
     // deliveryAddress
   ];
 
@@ -76,7 +76,7 @@ const Shipping = () => {
     title: "",
     price: "",
     delivery_time: "",
-    title_ar: "",
+    title_ar: ""
   });
 
   const handleedit = () => {
@@ -86,7 +86,7 @@ const Shipping = () => {
       title: orderData.title,
       title_ar: orderData.title_ar,
       price: orderData.price,
-      delivery_time: orderData.delivery_time,
+      delivery_time: orderData.delivery_time
     };
     axios
       .post("https://api.manjam.shop/v3/shipping/edit", data_send)
@@ -130,7 +130,7 @@ const Shipping = () => {
   const handleadd = () => {
     seteditloading(true);
     const data_send = {
-      ...addeddata,
+      ...addeddata
     };
     // console.log(data_send)
     axios
@@ -197,7 +197,7 @@ const Shipping = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "add"}</h4>
@@ -207,7 +207,7 @@ const Shipping = () => {
                 }}
                 style={{
                   fontSize: "22px",
-                  cursor: "pointer",
+                  cursor: "pointer"
                 }}
                 color="green"
               />
@@ -227,7 +227,7 @@ const Shipping = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -300,7 +300,7 @@ const Shipping = () => {
             {editloading ? (
               <div
                 style={{
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <Loader />
@@ -362,7 +362,7 @@ const Shipping = () => {
             {editloading ? (
               <div
                 style={{
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <Loader />

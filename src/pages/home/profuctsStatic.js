@@ -19,7 +19,7 @@ import {
   Tooltip,
   ArcElement,
   Filler,
-  Legend,
+  Legend
 } from "chart.js";
 // import { Line } from 'react-chartjs-2';
 import faker from "faker";
@@ -37,13 +37,13 @@ function ProfuctsStatic() {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: "top"
       },
       title: {
         display: true,
-        text: "Chart.js Line Chart",
-      },
-    },
+        text: "Chart.js Line Chart"
+      }
+    }
   };
 
   const labels = [
@@ -53,7 +53,7 @@ function ProfuctsStatic() {
     "April",
     "May",
     "June",
-    "July",
+    "July"
   ];
 
   const [AllNumbers, setAllNumbers] = useState([]);
@@ -67,27 +67,27 @@ function ProfuctsStatic() {
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
+          "rgba(255, 206, 86, 0.2)"
         ],
         borderColor: [
           "rgba(255, 99, 132, 1)",
           "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
+          "rgba(255, 206, 86, 1)"
         ],
-        borderWidth: 1,
-      },
-    ],
+        borderWidth: 1
+      }
+    ]
   });
 
   ChartJS.register(ArcElement, Tooltip, Legend);
 
   const options2 = {
     plugins: {
-      legend: true,
+      legend: true
     },
     scales: {
-      y: {},
-    },
+      y: {}
+    }
   };
 
   useEffect(() => {
@@ -101,17 +101,17 @@ function ProfuctsStatic() {
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
             "rgba(255, 206, 86, 0.2)",
-            "rgba(25, 206, 86, 1)",
+            "rgba(25, 206, 86, 1)"
           ],
           borderColor: [
             "rgba(255, 99, 132, 1)",
             "rgba(54, 162, 235, 1)",
             "rgba(255, 206, 86, 1)",
-            "rgba(25, 206, 86, 1)",
+            "rgba(25, 206, 86, 1)"
           ],
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     });
   }, [AllNumbers]);
 
@@ -145,7 +145,7 @@ function ProfuctsStatic() {
           alldata.allOrders.number,
           alldata.pendingOrders.number,
           alldata.completedOrders.number,
-          alldata.canceledOrders.number,
+          alldata.canceledOrders.number
         ]);
         // console.log(alldatacharts)
       })
@@ -158,12 +158,12 @@ function ProfuctsStatic() {
         data: [10, 20, 30],
         backgroundColor: "aqua",
         borderColor: "black",
-        pointBorderColor: "aqua",
-      },
+        pointBorderColor: "aqua"
+      }
     ],
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: ["Red", "Yellow", "Blue"],
+    labels: ["Red", "Yellow", "Blue"]
   };
 
   useEffect(() => {

@@ -4,29 +4,29 @@ export const RatiosLabels = ({ statics }) => {
   return [
     {
       label: "الفئات",
-      value: statics?.category_count,
+      value: statics?.category_count
     },
 
     {
       label: "إجمالى المنتجات",
-      value: statics?.items_count,
-    },
+      value: statics?.items_count
+    }
   ];
 };
 
 export const FilterCates = [
   {
     lable: "الكل",
-    value: "all",
+    value: "all"
   },
   {
     lable: "طعام",
-    value: "food",
+    value: "food"
   },
   {
     lable: "مشروبات",
-    value: "drinks",
-  },
+    value: "drinks"
+  }
 ];
 
 // export const getCategories = async () => {
@@ -37,19 +37,19 @@ export const FilterCates = [
 export const FilterByDate = [
   {
     label: "الاحدث",
-    value: "latest",
+    value: "latest"
   },
   {
     label: "الاقدم",
-    value: "lastes",
-  },
+    value: "lastes"
+  }
 ];
 
 export const selectCategories = async ({
   setBody,
   query,
   setgetdataOriginal,
-  setpageloading,
+  setpageloading
 }) => {
   const pros = await axios
     .get("https://api.manjam.shop/v3/category/getAll?type=admin")
@@ -87,7 +87,7 @@ export const offer_input = [
     id: "item_new_price",
     type: "text",
     name: "item_new_price",
-    placeholder: "اكتب السعر الجديد",
+    placeholder: "اكتب السعر الجديد"
   },
   {
     label: "السعر الحالى",
@@ -96,7 +96,7 @@ export const offer_input = [
     name: "item_old_price",
     placeholder: " السعر الحالى",
     value: oldrprice,
-    disable: true,
+    disable: true
   },
   {
     label: "إسم المنتج",
@@ -105,8 +105,8 @@ export const offer_input = [
     name: "item_name",
     placeholder: " إسم المنتج",
     value: productname,
-    disable: true,
-  },
+    disable: true
+  }
 ];
 
 export const setItem_s = ({ item }) => {
@@ -125,7 +125,7 @@ export const edit_input = [
     type: "text",
     name: "category_name",
     placeholder: " إسم التصنيف",
-    required: false,
+    required: false
   },
 
   {
@@ -137,8 +137,8 @@ export const edit_input = [
     required: false,
     show: true,
     getLink: getLink,
-    value: false,
-  },
+    value: false
+  }
 ];
 
 export const editProduct = (e, id, reselectedData, { closeModels }) => {

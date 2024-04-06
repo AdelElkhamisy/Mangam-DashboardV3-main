@@ -9,7 +9,7 @@ import {
   edit_input,
   deleteSocialMedia,
   selectSocialMedia,
-  setItem_s,
+  setItem_s
 } from "./functions";
 import lodash from "lodash/lodash";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -42,7 +42,7 @@ const SocialMedia = () => {
   const [removeModel, setRemoveModel] = useState(false);
   const [changeloading, setchangeloading] = useState({
     id: null,
-    loading: false,
+    loading: false
   });
   const closeModels = () => {
     setShowEditForm(false);
@@ -55,7 +55,7 @@ const SocialMedia = () => {
     name: "",
     link: "",
     image: "",
-    name_ar: "",
+    name_ar: ""
   });
   const [image, setimage] = useState(null);
   const [getdataOriginal, setgetdataOriginal] = useState([]);
@@ -65,13 +65,13 @@ const SocialMedia = () => {
       dataIndex: "link",
       type: "link",
       // linkName: "فيسبوك",
-      linkNameIndex: "name",
+      linkNameIndex: "name"
       // link:"www.facebook.com"
     },
     {
       label: "شعار موقع التواصل",
       dataIndex: "image",
-      type: "img",
+      type: "img"
     },
     {
       label: "أوامر",
@@ -84,7 +84,7 @@ const SocialMedia = () => {
             setitem(item);
             setItem_s({ item });
             setRemoveModel(false);
-          },
+          }
         },
         {
           label: "حذف",
@@ -94,10 +94,10 @@ const SocialMedia = () => {
             setItem_s({ item });
             setShowEditForm(false);
           },
-          class: "btn-danger",
-        },
-      ],
-    },
+          class: "btn-danger"
+        }
+      ]
+    }
   ];
   const [imageloading, setimageloading] = useState(false);
   const [socials, setsocials] = useState([]);
@@ -117,7 +117,7 @@ const SocialMedia = () => {
   const handleadd = () => {
     setaddloading(true);
     const data_send = {
-      ...addeddata,
+      ...addeddata
     };
     // console.log(data_send)
     axios
@@ -182,7 +182,7 @@ const SocialMedia = () => {
       name_ar: orderData.name_ar,
       image: orderData.image,
       link: orderData.link,
-      social_media_id: orderData.id,
+      social_media_id: orderData.id
     };
     // console.log(data_send);
     axios
@@ -211,7 +211,7 @@ const SocialMedia = () => {
   const columns = [
     {
       title: language == "ar" ? "*" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "صوره وسيلة التواصل" : "social image",
@@ -221,17 +221,17 @@ const SocialMedia = () => {
             <img src={record.image} alt={record.image} />
           </a>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "الاسم بالانجليزيه" : "English Name",
       dataIndex: "name",
-      key: "name",
+      key: "name"
     },
     {
       title: language == "ar" ? "الاسم بالعربيه" : "Arabic Name",
       dataIndex: "name_ar",
-      key: "name_ar",
+      key: "name_ar"
     },
     {
       title: language == "ar" ? "الحاله" : "status",
@@ -245,7 +245,7 @@ const SocialMedia = () => {
             {record.hidden == 0 ? "Show" : "Hidden"}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أوامر" : "action",
@@ -258,7 +258,7 @@ const SocialMedia = () => {
               alignItems: "center",
               justifyContent: "space-between",
               flexWrap: "wrap",
-              rowGap: "4px",
+              rowGap: "4px"
             }}
           >
             <img
@@ -277,11 +277,11 @@ const SocialMedia = () => {
                 onClick={() => {
                   setchangeloading({
                     id: record.id,
-                    loading: true,
+                    loading: true
                   });
                   const data_send = {
                     status: record.hidden == 0 ? 1 : 0,
-                    social_media_id: record.id,
+                    social_media_id: record.id
                   };
                   // console.log(data_send)
                   axios
@@ -302,7 +302,7 @@ const SocialMedia = () => {
                     .finally(() => {
                       setchangeloading({
                         id: null,
-                        loading: false,
+                        loading: false
                       });
                     });
                 }}
@@ -313,8 +313,8 @@ const SocialMedia = () => {
             )}
           </div>
         );
-      },
-    },
+      }
+    }
     // deliveryAddress
   ];
 
@@ -356,7 +356,7 @@ const SocialMedia = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h3>{language == "ar" ? "إضافه" : "Add"}</h3>
@@ -366,7 +366,7 @@ const SocialMedia = () => {
                 }}
                 style={{
                   fontSize: "22px",
-                  cursor: "pointer",
+                  cursor: "pointer"
                 }}
               />
             </div>
@@ -385,7 +385,7 @@ const SocialMedia = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -530,7 +530,7 @@ const SocialMedia = () => {
             {addloading ? (
               <div
                 style={{
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <Loader />
@@ -617,7 +617,7 @@ const SocialMedia = () => {
             {editloading ? (
               <div
                 style={{
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <Loader />

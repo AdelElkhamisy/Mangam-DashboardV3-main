@@ -48,7 +48,7 @@ const ReturnItems = () => {
   const columns = [
     {
       title: language == "ar" ? "*" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "إسم المنتج" : "Product Name",
@@ -56,7 +56,7 @@ const ReturnItems = () => {
       render: (_, record) => {
         // console.log(record?.order?.product_label);
         return <p>{record?.order?.product_label}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "التاريخ" : "Date",
@@ -67,47 +67,47 @@ const ReturnItems = () => {
             {moment(record?.order?.createdAt).format("YYYY-MM-DD hh:mm:ss")}
           </span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "وسيلة الشحن" : "Shipping Method",
       key: "Shipping_type",
       render: (_, record) => {
         return <p>{record?.order?.shipping[0]?.shipping_title}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "وسيلة الدفع" : "Payment Method",
       key: "Shipping_type",
       render: (_, record) => {
         return <p>{record?.order?.payment_method}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "الكمية المسترجعة" : "Returned Quantity",
       key: "returned_quantity",
       render: (_, record) => {
         return <p>{record?.quantity}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "السعر الكلى" : "Total Price",
       key: "total_price",
       render: (_, record) => {
         return <p>{record?.price}</p>;
-      },
+      }
     },
     {
       title: language == "ar" ? "سبب الارجاع" : "return reason",
       key: "reason",
-      dataIndex: "reason",
+      dataIndex: "reason"
     },
     {
       title: language == "ar" ? "صورة" : "image",
       key: "image",
       render: (_, record) => {
         return <img src={record?.imageLink} height={"50px"} />;
-      },
+      }
     },
     {
       title: language == "ar" ? "الحالة" : "Status",
@@ -130,7 +130,7 @@ const ReturnItems = () => {
             {record.status}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أوامر" : "Actions",
@@ -147,7 +147,7 @@ const ReturnItems = () => {
             {updateloading ? <Loader /> : language == "ar" ? "تغيير" : "change"}
           </button>
         );
-      },
+      }
     },
     // {
     //   title: language == 'ar' ? "عرض" : "Show",
@@ -177,7 +177,7 @@ const ReturnItems = () => {
             style={{
               width: "20px",
               height: "20px",
-              cursor: "pointer",
+              cursor: "pointer"
             }}
             checked={record.checked}
             type="checkbox"
@@ -185,8 +185,8 @@ const ReturnItems = () => {
             id=""
           />
         );
-      },
-    },
+      }
+    }
     // {
     //   title: "Storage",
     //   dataIndex: "storage",
@@ -217,7 +217,7 @@ const ReturnItems = () => {
       order_id: orderData.order.id,
       user_id: "11",
       status: newstatus,
-      return_id: orderData.id,
+      return_id: orderData.id
     };
     // console.log(data_send)
     axios
@@ -248,7 +248,7 @@ const ReturnItems = () => {
       .post(
         "https://api.manjam.shop/v3/return/getReturns",
         {
-          type: "admin",
+          type: "admin"
         },
         { timeout: 8989898989 }
       )
@@ -312,7 +312,7 @@ const ReturnItems = () => {
           return_date: moment(item.createdAt).format("L") || "",
           status: item.status || "",
           Reason: item.reason || "",
-          Reason_image: item.imageLink || "",
+          Reason_image: item.imageLink || ""
         };
         for (let i = 0; i < item.order.products[0]?.colors.length; i++) {
           newobj[`color${i + 1}`] =
@@ -480,7 +480,7 @@ const ReturnItems = () => {
                 gap: "10px",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -498,7 +498,7 @@ const ReturnItems = () => {
                   borderRadius: "10px",
                   border: "1px solid #ccc",
                   margin: "10px auto",
-                  outline: "none",
+                  outline: "none"
                 }}
                 onChange={(e) => {
                   searchType(e.target.value);
@@ -519,7 +519,7 @@ const ReturnItems = () => {
                 alignItems: "center",
                 justifyContent: "space-between",
                 margin: "10px 0px",
-                flexWrap: "wrap",
+                flexWrap: "wrap"
               }}
             >
               <div
@@ -592,7 +592,7 @@ const ReturnItems = () => {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   type="date"
                   onChange={(e) => {
@@ -609,7 +609,7 @@ const ReturnItems = () => {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   onChange={(e) => {
                     settodate(e.target.value);

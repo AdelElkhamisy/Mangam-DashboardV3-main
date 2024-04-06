@@ -18,7 +18,7 @@ import {
   contact_input,
   nameMont,
   offer_input,
-  user_input,
+  user_input
 } from "./functions";
 import Form from "../../components/form";
 import { useSelector } from "react-redux";
@@ -48,7 +48,7 @@ function Addition() {
     available_quantity: "",
     color_code: "",
     color: "",
-    color_ar: "",
+    color_ar: ""
   });
 
   const [addedproduct, setaddedproduct] = useState({
@@ -66,12 +66,12 @@ function Addition() {
     conditions_ar: "",
     isReturned: "1",
     return_period: "0",
-    store: "ksa",
+    store: "ksa"
   });
   const [addedcategory, setaddedcategory] = useState({
     title: "",
     title_ar: "",
-    image_url: "",
+    image_url: ""
   });
   const [productloading, setproductloading] = useState(false);
   const [ColorId, setColorId] = useState("");
@@ -91,18 +91,18 @@ function Addition() {
       color: "",
       color_ar: "",
       ColorProperities: [],
-      colloading: false,
-    },
+      colloading: false
+    }
   ]);
 
   const [addobj, setaddobj] = useState({
     label: "",
-    label_ar: "",
+    label_ar: ""
     // stoke:'',
   });
   const [addobjpropval, setaddobjpropval] = useState({
     label: "",
-    label_ar: "",
+    label_ar: ""
     // plus_price:'',
     // stock:'',
   });
@@ -112,7 +112,7 @@ function Addition() {
     text: "",
     text_ar: "",
     imageLink: "",
-    link: "",
+    link: ""
   });
   const getcategories = async () => {
     await axios
@@ -124,7 +124,7 @@ function Addition() {
         // setaddedproduct({...addedproduct,category_id})
         setaddedproduct({
           ...addedproduct,
-          category_id: res.data.message[0]?.id,
+          category_id: res.data.message[0]?.id
         });
       });
   };
@@ -180,7 +180,7 @@ function Addition() {
     setproductloading(true);
 
     const data_send = {
-      ...addedproduct,
+      ...addedproduct
     };
     axios
       .post("https://api.manjam.shop/v3/product/add_product", data_send)
@@ -240,7 +240,7 @@ function Addition() {
   const handleaddbanner = () => {
     setaddloading(true);
     const data_send = {
-      ...bannerdata,
+      ...bannerdata
     };
     // console.log(data_send)
     axios
@@ -280,7 +280,7 @@ function Addition() {
   };
   const handleaddcategory = () => {
     const data_send = {
-      ...addedcategory,
+      ...addedcategory
     };
     // console.log(data_send);
     axios
@@ -321,7 +321,7 @@ function Addition() {
       images: item.images,
       color: item.color,
       color_ar: item.color_ar,
-      color_code: item.color_code,
+      color_code: item.color_code
     };
     // console.log(data_send);
     axios
@@ -339,8 +339,8 @@ function Addition() {
               label_ar: "",
               // stoke:'',
               // stock:'',
-              color_id: res.data.message,
-            },
+              color_id: res.data.message
+            }
           ]);
           let allColorsData = [...ColorsArr];
           // console.log(allColorsData)
@@ -358,9 +358,9 @@ function Addition() {
                     label: "",
                     label_ar: "",
                     color_id: res.data.message,
-                    proploading: false,
-                  },
-                ],
+                    proploading: false
+                  }
+                ]
               };
             } else {
               return { ...item };
@@ -454,7 +454,7 @@ function Addition() {
     const data_send = {
       color_id: it.color_id,
       label: it.label,
-      label_ar: it.label_ar,
+      label_ar: it.label_ar
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add", data_send)
@@ -472,8 +472,8 @@ function Addition() {
               // plus_price:'',
               // stock:'',
               prop_id: res.data.message,
-              propvalloading: false,
-            },
+              propvalloading: false
+            }
           ];
           allColorsArr[index].ColorProperities = list2;
           setColorsArr(allColorsArr);
@@ -551,7 +551,7 @@ function Addition() {
     setColorsArr(allcolors);
 
     const data_send = {
-      ...itprop,
+      ...itprop
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add_value", data_send)
@@ -625,7 +625,7 @@ function Addition() {
                         setcategory_id(e.target.value);
                         setaddedproduct({
                           ...addedproduct,
-                          category_id: e.target.value,
+                          category_id: e.target.value
                         });
                       }}
                     >
@@ -651,7 +651,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          title: e.target.value,
+                          title: e.target.value
                         });
                       }}
                       type="text"
@@ -670,7 +670,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          title_ar: e.target.value,
+                          title_ar: e.target.value
                         });
                       }}
                       type="text"
@@ -687,7 +687,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          grade: e.target.value,
+                          grade: e.target.value
                         });
                       }}
                       value={addedproduct.grade}
@@ -712,7 +712,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          description: e.target.value,
+                          description: e.target.value
                         });
                       }}
                       type="text"
@@ -732,7 +732,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          description_ar: e.target.value,
+                          description_ar: e.target.value
                         });
                       }}
                       type="text"
@@ -750,7 +750,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          model_number: e.target.value,
+                          model_number: e.target.value
                         });
                       }}
                       type="text"
@@ -766,7 +766,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          producing_company: e.target.value,
+                          producing_company: e.target.value
                         });
                       }}
                       type="text"
@@ -796,7 +796,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          conditions: e.target.value,
+                          conditions: e.target.value
                         });
                       }}
                       type="text"
@@ -816,7 +816,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          conditions_ar: e.target.value,
+                          conditions_ar: e.target.value
                         });
                       }}
                       type="text"
@@ -857,7 +857,7 @@ function Addition() {
                       onChange={(e) => {
                         setaddedproduct({
                           ...addedproduct,
-                          return_period: e.target.value,
+                          return_period: e.target.value
                         });
                       }}
                       placeholder={
@@ -891,7 +891,7 @@ function Addition() {
                         onClick={(e) => {
                           setaddedproduct({
                             ...addedproduct,
-                            store: "uae***ksa",
+                            store: "uae***ksa"
                           });
                         }}
                         value=""
@@ -905,7 +905,7 @@ function Addition() {
                       <div
                         style={{
                           textAlign: "center",
-                          marginTop: "10px",
+                          marginTop: "10px"
                         }}
                       >
                         <Loader />
@@ -922,7 +922,7 @@ function Addition() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        margin: "20px 0px",
+                        margin: "20px 0px"
                       }}
                     >
                       <h4>
@@ -944,8 +944,8 @@ function Addition() {
                               color: "",
                               color_ar: "",
                               ColorProperities: [],
-                              colloading: false,
-                            },
+                              colloading: false
+                            }
                           ]);
                         }}
                       >
@@ -1026,7 +1026,7 @@ function Addition() {
                                   handlechangecolor(e, index);
                                   setcolorproperty({
                                     ...colorproperty,
-                                    color_code: e.target.value,
+                                    color_code: e.target.value
                                   });
                                 }}
                               />
@@ -1047,7 +1047,7 @@ function Addition() {
                                   handlechangecolor(e, index);
                                   setcolorproperty({
                                     ...colorproperty,
-                                    color: e.target.value,
+                                    color: e.target.value
                                   });
                                 }}
                               />
@@ -1068,7 +1068,7 @@ function Addition() {
                                   handlechangecolor(e, index);
                                   setcolorproperty({
                                     ...colorproperty,
-                                    color_ar: e.target.value,
+                                    color_ar: e.target.value
                                   });
                                 }}
                               />
@@ -1077,7 +1077,7 @@ function Addition() {
                                   style={{
                                     display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "center",
+                                    justifyContent: "center"
                                   }}
                                 >
                                   <Loader />
@@ -1161,7 +1161,7 @@ function Addition() {
                                         width: "20px",
                                         height: "20px",
                                         borderRadius: "50%",
-                                        backgroundColor: `${item.color_code}`,
+                                        backgroundColor: `${item.color_code}`
                                       }}
                                     ></div>
                                     <label htmlFor="">
@@ -1174,7 +1174,7 @@ function Addition() {
                                       onChange={(e) => {
                                         setaddobj({
                                           ...addobj,
-                                          label: e.target.value,
+                                          label: e.target.value
                                         });
                                         handlechagepropform(e, ind, index);
                                       }}
@@ -1190,7 +1190,7 @@ function Addition() {
                                       onChange={(e) => {
                                         setaddobj({
                                           ...addobj,
-                                          label_ar: e.target.value,
+                                          label_ar: e.target.value
                                         });
                                         handlechagepropform(e, ind, index);
                                       }}
@@ -1207,7 +1207,7 @@ function Addition() {
                                           display: "flex",
                                           alignItems: "center",
                                           justifyContent: "center",
-                                          marginTop: "20px",
+                                          marginTop: "20px"
                                         }}
                                       >
                                         <Loader />
@@ -1233,7 +1233,7 @@ function Addition() {
                                           display: "flex",
                                           alignItems: "center",
                                           justifyContent: "space-between",
-                                          margin: "20px 0px",
+                                          margin: "20px 0px"
                                         }}
                                       >
                                         <h4>
@@ -1250,7 +1250,7 @@ function Addition() {
                                               label: "",
                                               label_ar: "",
                                               prop_id: list2[0]?.prop_id,
-                                              propvalloading: false,
+                                              propvalloading: false
                                             });
                                             allColorsArr[
                                               index
@@ -1261,7 +1261,7 @@ function Addition() {
                                           }}
                                           style={{
                                             cursor: "pointer",
-                                            fontSize: "20px",
+                                            fontSize: "20px"
                                           }}
                                         />
                                       </div>
@@ -1302,7 +1302,7 @@ function Addition() {
                                                   );
                                                   setaddobjpropval({
                                                     ...addobjpropval,
-                                                    label: e.target.value,
+                                                    label: e.target.value
                                                   });
                                                 }}
                                                 placeholder="example: storage 256"
@@ -1327,7 +1327,7 @@ function Addition() {
                                                   );
                                                   setaddobjpropval({
                                                     ...addobjpropval,
-                                                    label_ar: e.target.value,
+                                                    label_ar: e.target.value
                                                   });
                                                 }}
                                                 placeholder="example: التخزين 256"
@@ -1349,7 +1349,7 @@ function Addition() {
                                                     marginTop: "10px",
                                                     display: "flex",
                                                     alignItems: "center",
-                                                    justifyContent: "center",
+                                                    justifyContent: "center"
                                                   }}
                                                 >
                                                   <Loader />
@@ -1404,7 +1404,7 @@ function Addition() {
                     onChange={(e) => {
                       setaddedcategory({
                         ...addedcategory,
-                        title: e.target.value,
+                        title: e.target.value
                       });
                     }}
                     type="text"
@@ -1423,7 +1423,7 @@ function Addition() {
                     onChange={(e) => {
                       setaddedcategory({
                         ...addedcategory,
-                        title_ar: e.target.value,
+                        title_ar: e.target.value
                       });
                     }}
                     type="text"
@@ -1492,7 +1492,7 @@ function Addition() {
                     onChange={(e) => {
                       setbannerdata({
                         ...bannerdata,
-                        title_ar: e.target.value,
+                        title_ar: e.target.value
                       });
                     }}
                     type="text"

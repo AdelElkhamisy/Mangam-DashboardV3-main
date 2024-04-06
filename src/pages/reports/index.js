@@ -95,7 +95,7 @@ function Reports() {
           producing_company: item.products[0].producing_company || "",
           store: item.products[0].store || "",
           payementId: item.payementId || "",
-          userId: item.userId || "",
+          userId: item.userId || ""
         };
         for (let i = 0; i < item.products[0]?.colors.length; i++) {
           newobj[`color${i + 1}`] = item.products[0]?.colors[i].color || "";
@@ -124,7 +124,7 @@ function Reports() {
   const relpy = (id) => {
     axios
       .post("https://api.manjam.shop/v3/order/replyReport", {
-        report_id: showchangestatus,
+        report_id: showchangestatus
       })
       .then((res) => {
         if (res.data.status) {
@@ -142,7 +142,7 @@ function Reports() {
   const columns = [
     {
       title: language == "ar" ? "رقم الشكوى" : "Id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     // {
     //   title: language=='ar'?"الدرجه":"Grade",
@@ -154,7 +154,7 @@ function Reports() {
         return (
           <span>{moment(record.createdAt).format("YYYY-MM-DD hh:mm:ss")}</span>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "رقم التليفون " : "User Phone",
@@ -162,7 +162,7 @@ function Reports() {
       render: (_, record) => {
         // console.log(record)
         return <a href={"tel:" + record?.user_phone}>{record?.user_phone}</a>;
-      },
+      }
     },
 
     {
@@ -171,7 +171,7 @@ function Reports() {
       render: (_, record) => {
         // console.log(record)
         return <a href={"#"}>{record?.user_name}</a>;
-      },
+      }
     },
 
     {
@@ -180,12 +180,12 @@ function Reports() {
       render: (_, record) => {
         // console.log(record)
         return <a href={"mailto:" + record?.user_emai}>{record?.user_email}</a>;
-      },
+      }
     },
 
     {
       title: language == "ar" ? "معرف المستخدم" : "User Id",
-      dataIndex: "user_id",
+      dataIndex: "user_id"
     },
 
     {
@@ -198,7 +198,7 @@ function Reports() {
             {record.reed ? "تم الرد" : "لم يتم الرد"}
           </p>
         );
-      },
+      }
     },
 
     {
@@ -219,7 +219,7 @@ function Reports() {
             {language == "ar" ? "عرض" : "Show"}
           </button>
         );
-      },
+      }
     },
     // {
     //   title: language=='ar'?"التخزين":"Storage",
@@ -252,8 +252,8 @@ function Reports() {
             />
           </div>
         );
-      },
-    },
+      }
+    }
 
     // deliveryAddress
   ];
@@ -372,7 +372,7 @@ function Reports() {
                 gap: "10px",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -390,7 +390,7 @@ function Reports() {
                   borderRadius: "10px",
                   border: "1px solid #ccc",
                   margin: "10px auto",
-                  outline: "none",
+                  outline: "none"
                 }}
                 onChange={(e) => {
                   searchType(e.target.value);
@@ -410,7 +410,7 @@ function Reports() {
                 display: "flex",
                 margin: "10px 0px",
                 justifyContent: "space-between",
-                width: "100%",
+                width: "100%"
               }}
             >
               <div
@@ -516,7 +516,7 @@ function Reports() {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   type="date"
                   onChange={(e) => {
@@ -533,7 +533,7 @@ function Reports() {
                     borderRadius: "4px",
                     cursor: "pointer",
                     border: "1px solid #ccc",
-                    outline: "none",
+                    outline: "none"
                   }}
                   onChange={(e) => {
                     settodate(e.target.value);

@@ -12,7 +12,7 @@ export const updateStatus = (
   e.preventDefault();
   const data_send = {
     status: e.currentTarget["status"].value,
-    id: orderId,
+    id: orderId
   };
 
   console.log(data_send);

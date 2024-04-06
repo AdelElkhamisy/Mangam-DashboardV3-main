@@ -11,18 +11,18 @@ export const choices = [
   {
     label: "إضافه منتج",
     label_en: "Add Product",
-    data: "product",
+    data: "product"
   },
   {
     label: "إضافة صنف",
     label_en: "Add Category",
-    data: "category",
+    data: "category"
   },
   {
     label: "إضافة بانر",
     label_en: "Add Banner",
-    data: "banner",
-  },
+    data: "banner"
+  }
   // {
   //   label: "إضافة مستخدم",
   //   data: "adduser",
@@ -44,7 +44,7 @@ export const classification_input = (changeFunction, id) => [
     id: "category_id",
     name: "category_id",
     type: "selectCategory",
-    changeFunction: changeFunction,
+    changeFunction: changeFunction
   },
   {
     label: `Product Name`,
@@ -53,7 +53,7 @@ export const classification_input = (changeFunction, id) => [
     type: "text",
     name: "title",
     placeholder: `Product Name`,
-    placeholder_ar: `إسم المنتج`,
+    placeholder_ar: `إسم المنتج`
   },
   {
     label: `Arabic Product Name`,
@@ -62,7 +62,7 @@ export const classification_input = (changeFunction, id) => [
     type: "text",
     name: "title_ar",
     placeholder: `Arabic Product Name`,
-    placeholder_ar: `إسم المنتج بالعربيه`,
+    placeholder_ar: `إسم المنتج بالعربيه`
   },
   {
     label: `Product Description`,
@@ -71,7 +71,7 @@ export const classification_input = (changeFunction, id) => [
     type: "textarea",
     name: "description",
     placeholder: "Product Description ",
-    placeholder_ar: "وصف المنتج",
+    placeholder_ar: "وصف المنتج"
   },
   {
     label: `Arabic Product Description`,
@@ -80,7 +80,7 @@ export const classification_input = (changeFunction, id) => [
     type: "textarea",
     name: "description_ar",
     placeholder: "Arabic Product Description ",
-    placeholder_ar: "وصف المنتج بالعربيه",
+    placeholder_ar: "وصف المنتج بالعربيه"
   },
   {
     label: `Model Number`,
@@ -89,7 +89,7 @@ export const classification_input = (changeFunction, id) => [
     type: "textarea",
     name: "model_number",
     placeholder: "Model Number",
-    placeholder_ar: "رقم النموذج",
+    placeholder_ar: "رقم النموذج"
   },
   {
     label: `Producting Company`,
@@ -98,7 +98,7 @@ export const classification_input = (changeFunction, id) => [
     type: "text",
     name: "producing_company",
     placeholder: "Product Company",
-    placeholder_ar: "إسم الشركه",
+    placeholder_ar: "إسم الشركه"
   },
   {
     label: "Will Avilable After",
@@ -106,7 +106,7 @@ export const classification_input = (changeFunction, id) => [
     id: "will_av_after",
     name: "will_av_after",
     type: "date",
-    input_min: true,
+    input_min: true
   },
   {
     label: "Will Avilable For",
@@ -115,7 +115,7 @@ export const classification_input = (changeFunction, id) => [
     name: "will_av_for",
     type: "date",
     min: "true",
-    min_for: 8,
+    min_for: 8
   },
   // {
   //   label:'Status',
@@ -128,15 +128,15 @@ export const classification_input = (changeFunction, id) => [
     label_ar: "الشروط بالانجليزيه",
     id: "conditions",
     name: "conditions",
-    type: "textarea",
+    type: "textarea"
   },
   {
     label: "arabic conditions",
     label_ar: "الشروط بالعربيه",
     id: "conditions_ar",
     name: "conditions_ar",
-    type: "textarea",
-  },
+    type: "textarea"
+  }
 ];
 
 export const categories_input = [
@@ -147,7 +147,7 @@ export const categories_input = [
     type: "text",
     name: "title",
     placeholder: "Add Category Name",
-    placeholder_ar: "أضف اسم الفئه",
+    placeholder_ar: "أضف اسم الفئه"
   },
   {
     label: "arabic category name",
@@ -156,7 +156,7 @@ export const categories_input = [
     type: "text",
     name: "title_ar",
     placeholder: "Add Category Name in arabic",
-    placeholder_ar: "أضف اسم الفئه",
+    placeholder_ar: "أضف اسم الفئه"
   },
   {
     label: "Category Image",
@@ -166,8 +166,8 @@ export const categories_input = [
     name: "image_url",
     placeholder: "Add Category Image",
     placeholder_ar: "أضف صوره الفئه",
-    show: false,
-  },
+    show: false
+  }
 ];
 
 export const add_class = (e, images, category_id) => {
@@ -200,7 +200,7 @@ export const add_class = (e, images, category_id) => {
     // title_ar:handleClassification.title_ar,
     // hidden:0,
     conditions: handleClassification.conditions,
-    conditions_ar: handleClassification.conditions_ar,
+    conditions_ar: handleClassification.conditions_ar
   };
   // console.log(data_send)
   axios
@@ -226,22 +226,22 @@ export const offer_input = [
     id: "offer",
     type: "text",
     name: "offer_title",
-    placeholder: "اكتب عنوان العرض",
+    placeholder: "اكتب عنوان العرض"
   },
   {
     label: "تفاصيل العرض",
     id: "details",
     type: "textarea",
     name: "offer_details",
-    placeholder: "اكتب سعر",
+    placeholder: "اكتب سعر"
   },
   {
     label: "تحميل صورة",
     id: "offer_img",
     type: "file",
     name: "offer_img",
-    placeholder: "اختر صورة من جهازك أو قم بالسحب هنا",
-  },
+    placeholder: "اختر صورة من جهازك أو قم بالسحب هنا"
+  }
 ];
 
 export const add_offer = (e) => {
@@ -268,7 +268,7 @@ export const add_category = (e) => {
       const data_send = {
         title: handleCategories.title,
         title_ar: handleCategories.title_ar,
-        image_url: res.data.imgUrl,
+        image_url: res.data.imgUrl
       };
       // console.log(data_send)
       axios
@@ -304,22 +304,22 @@ export const address_input = [
     id: "name",
     type: "text",
     name: "far3_title",
-    placeholder: "اكتب اسم الفرع",
+    placeholder: "اكتب اسم الفرع"
   },
   {
     label: "عنوان الفرع",
     id: "address",
     type: "text",
     name: "far3_address",
-    placeholder: "اكتب عنوان الفرع",
+    placeholder: "اكتب عنوان الفرع"
   },
   {
     label: "رقم التليفون",
     id: "offer",
     type: "number",
     name: "far3_title",
-    placeholder: "اكتب رقم التليفون",
-  },
+    placeholder: "اكتب رقم التليفون"
+  }
 ];
 let rData = false;
 export let contact_input = false;
@@ -336,7 +336,7 @@ export let contact_input = false;
       type: "text",
       name: "address",
       placeholder: " عنوان الشركة",
-      value: rData.address,
+      value: rData.address
     },
     {
       label: " اسم الشركة",
@@ -344,7 +344,7 @@ export let contact_input = false;
       type: "text",
       name: "title",
       placeholder: " اسم الشركة",
-      value: rData.title,
+      value: rData.title
     },
     {
       label: " رقم التليفون",
@@ -352,7 +352,7 @@ export let contact_input = false;
       type: "text",
       name: "phone",
       placeholder: "اكتب رقم تليفون",
-      value: rData.phone,
+      value: rData.phone
     },
     {
       label: "البريد الالكتروني",
@@ -360,7 +360,7 @@ export let contact_input = false;
       type: "text",
       name: "email",
       placeholder: "اكتب البريد الالكتروني ",
-      value: rData.email,
+      value: rData.email
     },
     {
       label: "أيام العمل",
@@ -368,7 +368,7 @@ export let contact_input = false;
       type: "text",
       name: "work_days",
       placeholder: "اكتب عدد أيام العمل",
-      value: rData.work_days,
+      value: rData.work_days
     },
     {
       label: "معلومات عن الشركة",
@@ -377,7 +377,7 @@ export let contact_input = false;
       name: "description",
       placeholder: "معلومات عن الشركة",
       required: false,
-      value: rData.des,
+      value: rData.des
       // des
     },
     {
@@ -386,7 +386,7 @@ export let contact_input = false;
       type: "text",
       name: "latitude",
       placeholder: "اكتب latitude",
-      value: rData.latitude,
+      value: rData.latitude
     },
     {
       label: "longitude",
@@ -394,8 +394,8 @@ export let contact_input = false;
       type: "text",
       name: "longitude",
       placeholder: "اكتب longitude",
-      value: rData.longitude,
-    },
+      value: rData.longitude
+    }
   ];
 })();
 // export const contact_input = [
@@ -475,21 +475,21 @@ export const user_input = [
     id: "user_email",
     type: "email",
     name: "user_email",
-    placeholder: "أدخل البريد الإلكتروني",
+    placeholder: "أدخل البريد الإلكتروني"
   },
   {
     label: "كلمة المرور",
     id: "password",
     type: "password",
     name: "password",
-    placeholder: "أدخل كلمة المرور",
+    placeholder: "أدخل كلمة المرور"
   },
   {
     label: "اسم المستخدم",
     id: "user_name",
     type: "text",
     name: "user_name",
-    placeholder: "أدخل اسم المستخدم",
+    placeholder: "أدخل اسم المستخدم"
   },
 
   {
@@ -508,25 +508,25 @@ export const user_input = [
             options={[
               {
                 value: "admin",
-                label: "admin",
+                label: "admin"
               },
               {
                 value: "reception",
-                label: "reception",
-              },
+                label: "reception"
+              }
             ]}
           />
         </div>
       );
-    },
+    }
   },
   {
     label: "رقم الهاتف",
     id: "phone",
     type: "text",
     name: "phone",
-    placeholder: "أدخل رقم الهاتف",
-  },
+    placeholder: "أدخل رقم الهاتف"
+  }
 ];
 
 export const add_user = (e) => {

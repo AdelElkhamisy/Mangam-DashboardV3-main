@@ -24,30 +24,30 @@ const PropertyValues = () => {
   const [addobj, setaddobj] = useState({
     label: "",
     label_ar: "",
-    plus_price: "",
+    plus_price: ""
   });
   const [showedit, setshowedit] = useState(false);
   const [recorddata, setrecorddata] = useState({});
   const [rowdataload, setrowdataload] = useState({
     loading: false,
-    id: "",
+    id: ""
   });
   const columns = [
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "إسم القيمه بالانجليزيه" : "Label In English",
       dataIndex: "label",
-      key: "label",
+      key: "label"
     },
     {
       title: language == "ar" ? "إسم القيمه بالعربيه" : "Label In Arabic",
       dataIndex: "label_ar",
-      key: "label_ar",
-    },
+      key: "label_ar"
+    }
     // {
     //   title:language=='ar'?"أوامر":"Actions",
     //   key:'action',
@@ -88,7 +88,7 @@ const PropertyValues = () => {
   ];
   const handledelete = (id) => {
     const data_send = {
-      prop_value_id: id,
+      prop_value_id: id
     };
     // console.log(data_send);
     axios
@@ -107,7 +107,7 @@ const PropertyValues = () => {
       .finally(() => {
         setrowdataload({
           loading: false,
-          id: "",
+          id: ""
         });
       });
   };
@@ -115,7 +115,7 @@ const PropertyValues = () => {
     setaddloading(true);
     const data_send = {
       ...addobj,
-      prop_id: record.id,
+      prop_id: record.id
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add_value", data_send)
@@ -136,7 +136,7 @@ const PropertyValues = () => {
   };
   const getvalues = () => {
     const data_send = {
-      prop_id: record.id,
+      prop_id: record.id
     };
     // console.log(data_send)
     axios
@@ -158,7 +158,7 @@ const PropertyValues = () => {
       label: recorddata.label,
       title_ar: recorddata.label_ar,
       prop_value_id: record.id,
-      plus_price: recorddata.plus_price,
+      plus_price: recorddata.plus_price
     };
     console.log(data_send);
     axios
@@ -220,7 +220,7 @@ const PropertyValues = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "add"}</h4>
@@ -245,7 +245,7 @@ const PropertyValues = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -360,7 +360,7 @@ const PropertyValues = () => {
                     onChange={(e) => {
                       setrecorddata({
                         ...recorddata,
-                        label_ar: e.target.value,
+                        label_ar: e.target.value
                       });
                     }}
                     type="text"
@@ -373,7 +373,7 @@ const PropertyValues = () => {
                     onChange={(e) => {
                       setrecorddata({
                         ...recorddata,
-                        plus_price: e.target.value,
+                        plus_price: e.target.value
                       });
                     }}
                     type="text"

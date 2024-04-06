@@ -36,7 +36,7 @@ function App() {
     axios
       .post("https://api.manjam.shop/v3/user/getInfo", {
         id: userData ? (userData[0] ? userData[0]?.id : null) : null,
-        type: "admin",
+        type: "admin"
       })
       .then((res) => {
         if (!res.data.status) {

@@ -9,7 +9,7 @@ import {
   edit_input,
   deleteCategories,
   selectCategories,
-  setItem_s,
+  setItem_s
 } from "./functions";
 import Form from "../../components/form";
 import { Icon } from "@iconify/react";
@@ -22,7 +22,7 @@ import { Loader } from "rsuite";
 const Categories = () => {
   const [changeloading, setchangeloading] = useState({
     id: null,
-    loading: false,
+    loading: false
   });
   const [item, setitem] = useState(false);
   const [searchTxt, setSearchTxt] = useState("");
@@ -53,22 +53,22 @@ const Categories = () => {
   const columns = [
     {
       title: language == "ar" ? "*" : "id",
-      dataIndex: "id",
+      dataIndex: "id"
     },
     {
       title: language == "ar" ? "الصوره" : "Image",
       type: "img",
       render: (_, record) => {
         return <img src={record.image} alt="" />;
-      },
+      }
     },
     {
       title: language == "ar" ? "الاسم" : "Name",
-      dataIndex: "title",
+      dataIndex: "title"
     },
     {
       title: language == "ar" ? "الاسم بالعربيه" : "Arabic Name",
-      dataIndex: "title_ar",
+      dataIndex: "title_ar"
     },
 
     {
@@ -87,7 +87,7 @@ const Categories = () => {
             {record.hidden}
           </p>
         );
-      },
+      }
     },
     {
       title: language == "ar" ? "أمر" : "Action",
@@ -100,7 +100,7 @@ const Categories = () => {
               alignItems: "center",
               justifyContent: "space-between",
               flexWrap: "wrap",
-              rowGap: "3px",
+              rowGap: "3px"
             }}
           >
             {changeloading.id == record.id ? (
@@ -110,15 +110,13 @@ const Categories = () => {
                 onClick={() => {
                   setchangeloading({
                     id: record.id,
-                    loading: true,
+                    loading: true
                   });
                   // console.log(record)
                   const data_send = {
                     category_id: record.id,
                     hidden:
-                      record.hidden == "show" || record.hidden == "Show"
-                        ? 1
-                        : 0,
+                      record.hidden == "show" || record.hidden == "Show" ? 1 : 0
                   };
                   // console.log(data_send)
                   axios
@@ -134,7 +132,7 @@ const Categories = () => {
                           setBody,
                           query,
                           setgetdataOriginal,
-                          setpageloading,
+                          setpageloading
                         });
                       } else if (res.data.status == 0) {
                         toast.error(res.data.message);
@@ -146,7 +144,7 @@ const Categories = () => {
                     .finally(() => {
                       setchangeloading({
                         id: null,
-                        loading: false,
+                        loading: false
                       });
                     });
                 }}
@@ -166,8 +164,8 @@ const Categories = () => {
             />
           </div>
         );
-      },
-    },
+      }
+    }
     // {
     //   label: "أوامر",
     //   type: "actions",
@@ -215,7 +213,7 @@ const Categories = () => {
         setBody,
         formattedQuery,
         setgetdataOriginal,
-        setpageloading,
+        setpageloading
       });
     }
     setBody(filteredData);
@@ -264,7 +262,7 @@ const Categories = () => {
       id: rowdata.id,
       title: rowdata.title,
       title_ar: rowdata.title_ar,
-      image_url: rowdata.image,
+      image_url: rowdata.image
     };
     // console.log(data_send);
     axios
@@ -277,7 +275,7 @@ const Categories = () => {
             setBody,
             query,
             setgetdataOriginal,
-            setpageloading,
+            setpageloading
           });
         } else if (res.data.status == 0) {
           toast.error(res.data.message);
@@ -315,7 +313,7 @@ const Categories = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -428,7 +426,7 @@ const Categories = () => {
                     setBody,
                     query,
                     setgetdataOriginal,
-                    setpageloading,
+                    setpageloading
                   }),
                 { closeModels }
               );

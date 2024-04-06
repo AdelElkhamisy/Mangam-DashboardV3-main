@@ -30,7 +30,7 @@ const EditProduct = () => {
     isReturned: record.isReturned,
     return_period: record.return_period,
     store: record.store,
-    loading: false,
+    loading: false
   });
   const [colorDeletedImages, setcolorDeletedImages] = useState([]);
   const [image, setimage] = useState(null);
@@ -79,7 +79,7 @@ const EditProduct = () => {
       // grade:record.grade,
       isReturned: record.isReturned,
       return_period: record.return_period,
-      store: record.store,
+      store: record.store
     });
   };
   const getcategories = async () => {
@@ -107,7 +107,7 @@ const EditProduct = () => {
           let list = [...ColorsArr];
           let obj = {
             id: allcolorsData[i].images.length,
-            link: res.data.imgUrl,
+            link: res.data.imgUrl
           };
           allcolorsData[i].images.push(obj);
           // if(list[i]['images']==""){
@@ -139,7 +139,7 @@ const EditProduct = () => {
           let allcolorsData = [...ColorsArr];
           let obj = {
             id: allcolorsData[i].images.length,
-            link: res.data.imgUrl,
+            link: res.data.imgUrl
           };
           ColorsArr[i].images.push(obj);
           setColorsArr(allcolorsData);
@@ -181,7 +181,7 @@ const EditProduct = () => {
       color_ar: item.color_ar,
       // available_quantity:item.available_quantity,
       // price:item.price,
-      color_code: item.color_code,
+      color_code: item.color_code
     };
     let allcolors = [...ColorsArr];
     axios
@@ -225,7 +225,7 @@ const EditProduct = () => {
     const data_send = {
       color_id: it.color_id,
       label: it.label,
-      label_ar: it.label_ar,
+      label_ar: it.label_ar
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add", data_send)
@@ -274,7 +274,7 @@ const EditProduct = () => {
       label_ar: data.label_ar,
       // plus_price:data.plus_price,
       // stock:data.stock,
-      prop_id: data.prop_id,
+      prop_id: data.prop_id
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add_value", data_send)
@@ -307,7 +307,7 @@ const EditProduct = () => {
     const data_send = {
       label: itPropValue.label,
       label_ar: itPropValue.label_ar,
-      prop_value_id: itPropValue.id,
+      prop_value_id: itPropValue.id
       // plus_price:itPropValue.plus_price
     };
     axios
@@ -373,7 +373,7 @@ const EditProduct = () => {
       color_code: data.color_code,
       color: data.color,
       color_id: data.id,
-      color_ar: data.color_ar,
+      color_ar: data.color_ar
     };
 
     axios
@@ -428,7 +428,7 @@ const EditProduct = () => {
     const data_send = {
       prop_id: itProp.id,
       label: itProp.label,
-      label_ar: itProp.label_ar,
+      label_ar: itProp.label_ar
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/edit", data_send)
@@ -476,7 +476,7 @@ const EditProduct = () => {
       description_ar: ProdDaWioutCol.description_ar,
       isReturned: ProdDaWioutCol.isReturned,
       return_period: ProdDaWioutCol.return_period,
-      store: ProdDaWioutCol.store,
+      store: ProdDaWioutCol.store
     };
     // console.log(data_send)
     axios
@@ -550,7 +550,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    title: e.target.value,
+                    title: e.target.value
                   });
                 }}
                 type="text"
@@ -574,7 +574,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    title_ar: e.target.value,
+                    title_ar: e.target.value
                   });
                 }}
                 type="text"
@@ -595,7 +595,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    description: e.target.value,
+                    description: e.target.value
                   });
                 }}
                 type="text"
@@ -616,7 +616,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    description_ar: e.target.value,
+                    description_ar: e.target.value
                   });
                 }}
                 type="text"
@@ -635,7 +635,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    model_number: e.target.value,
+                    model_number: e.target.value
                   });
                 }}
                 type="text"
@@ -650,7 +650,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    producing_company: e.target.value,
+                    producing_company: e.target.value
                   });
                 }}
                 type="text"
@@ -679,7 +679,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    conditions: e.target.value,
+                    conditions: e.target.value
                   });
                 }}
                 type="text"
@@ -698,7 +698,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    conditions_ar: e.target.value,
+                    conditions_ar: e.target.value
                   });
                 }}
                 type="text"
@@ -713,7 +713,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    isReturned: e.target.value,
+                    isReturned: e.target.value
                   });
                 }}
                 value={ProdDaWioutCol.isReturned}
@@ -748,7 +748,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    return_period: e.target.value,
+                    return_period: e.target.value
                   });
                 }}
                 placeholder={
@@ -765,7 +765,7 @@ const EditProduct = () => {
                 onChange={(e) => {
                   setProdDaWioutCol({
                     ...ProdDaWioutCol,
-                    store: e.target.value,
+                    store: e.target.value
                   });
                 }}
                 value={ProdDaWioutCol.store}
@@ -792,7 +792,7 @@ const EditProduct = () => {
                   onClick={(e) => {
                     setProdDaWioutCol({
                       ...ProdDaWioutCol,
-                      store: "uae***ksa",
+                      store: "uae***ksa"
                     });
                   }}
                   value="uae***ksa"
@@ -806,7 +806,7 @@ const EditProduct = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    marginTop: "10px",
+                    marginTop: "10px"
                   }}
                 >
                   <Loader />
@@ -822,7 +822,7 @@ const EditProduct = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                margin: "20px 0px",
+                margin: "20px 0px"
               }}
             >
               <h4>{language == "ar" ? "إضافة لون جديد" : "Add New Color"}</h4>
@@ -841,8 +841,8 @@ const EditProduct = () => {
                       color_ar: "",
                       new: true,
                       loading: false,
-                      ColorProperities: [],
-                    },
+                      ColorProperities: []
+                    }
                   ]);
                 }}
               >
@@ -969,7 +969,7 @@ const EditProduct = () => {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          marginTop: "10px",
+                          marginTop: "10px"
                         }}
                       >
                         <Loader />
@@ -986,7 +986,7 @@ const EditProduct = () => {
                         margin: "20px 0px",
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "space-between",
+                        justifyContent: "space-between"
                       }}
                     >
                       <h4>
@@ -1036,7 +1036,7 @@ const EditProduct = () => {
                               width: "20px",
                               height: "20px",
                               borderRadius: "50%",
-                              backgroundColor: `${item.color_code}`,
+                              backgroundColor: `${item.color_code}`
                             }}
                           ></div>
                           <label htmlFor="">
@@ -1086,7 +1086,7 @@ const EditProduct = () => {
                                   display: "flex",
                                   alignItems: "center",
                                   justifyContent: "center",
-                                  margin: "10px 0px",
+                                  margin: "10px 0px"
                                 }}
                               >
                                 <Loader />
@@ -1106,7 +1106,7 @@ const EditProduct = () => {
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                margin: "10px 0px",
+                                margin: "10px 0px"
                               }}
                             >
                               <Loader />
@@ -1118,7 +1118,7 @@ const EditProduct = () => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 gap: "4px",
-                                flexWrap: "wrap",
+                                flexWrap: "wrap"
                               }}
                             >
                               <button
@@ -1143,7 +1143,7 @@ const EditProduct = () => {
                               <button
                                 onClick={() => {
                                   const data_send = {
-                                    prop_id: itProp.id,
+                                    prop_id: itProp.id
                                   };
                                   axios
                                     .post(
@@ -1180,7 +1180,7 @@ const EditProduct = () => {
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "space-between",
-                              margin: "20px 0px",
+                              margin: "20px 0px"
                             }}
                           >
                             <h4>
@@ -1199,7 +1199,7 @@ const EditProduct = () => {
                                   new: true,
                                   // stock:'',
                                   prop_id: itProp.id,
-                                  loading: false,
+                                  loading: false
                                 });
                                 allColorsArr[index].props[indProp].values =
                                   list2;
@@ -1275,7 +1275,7 @@ const EditProduct = () => {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        margin: "10px 0px",
+                                        margin: "10px 0px"
                                       }}
                                     >
                                       <Loader />
@@ -1295,7 +1295,7 @@ const EditProduct = () => {
                                       display: "flex",
                                       alignItems: "center",
                                       justifyContent: "center",
-                                      margin: "10px 0px",
+                                      margin: "10px 0px"
                                     }}
                                   >
                                     <Loader />
@@ -1307,7 +1307,7 @@ const EditProduct = () => {
                                       alignItems: "center",
                                       justifyContent: "center",
                                       gap: "4px",
-                                      flexWrap: "wrap",
+                                      flexWrap: "wrap"
                                     }}
                                   >
                                     <button
@@ -1332,7 +1332,7 @@ const EditProduct = () => {
                                     <button
                                       onClick={() => {
                                         const data_send = {
-                                          prop_value_id: itPropValue.id,
+                                          prop_value_id: itPropValue.id
                                         };
                                         axios
                                           .post(

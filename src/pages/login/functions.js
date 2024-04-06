@@ -9,7 +9,7 @@ export const auth_inputs = [
     id: "user_email",
     name: "email",
     placeholder: "اكتب ايميلك",
-    type: "email",
+    type: "email"
   },
   {
     label_ar: "كلمة السر",
@@ -17,13 +17,13 @@ export const auth_inputs = [
     id: "user_password",
     name: "password",
     placeholder: "اكتب كلمة السر",
-    type: "password",
-  },
+    type: "password"
+  }
 ];
 
 const fakeLogin = {
   user_email: "roma@admin.com",
-  user_password: "7410",
+  user_password: "7410"
 };
 export const login = (e) => {
   e.preventDefault();

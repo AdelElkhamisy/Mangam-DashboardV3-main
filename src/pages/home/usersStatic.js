@@ -17,7 +17,7 @@ import {
   Tooltip,
   ArcElement,
   Filler,
-  Legend,
+  Legend
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 function ProfuctsStatic2() {
@@ -52,7 +52,7 @@ function ProfuctsStatic2() {
           alldata.allReturns.number,
           alldata.approvedReturns.number,
           alldata.rejectedReturns.number,
-          alldata.pendingreturns.number,
+          alldata.pendingreturns.number
         ]);
         setdata2(alldatacharts);
         // console.log(alldatacharts)
@@ -71,17 +71,17 @@ function ProfuctsStatic2() {
           "rgba(25, 206, 86, 1)",
           "rgba(255, 99, 132, 0.2)",
           "rgba(255, 206, 86, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
+          "rgba(54, 162, 235, 0.2)"
         ],
         borderColor: [
           "rgba(25, 206, 86, 1)",
           "rgba(255, 99, 132, 1)",
           "rgba(255, 206, 86, 1)",
-          "rgba(54, 162, 235, 1)",
+          "rgba(54, 162, 235, 1)"
         ],
-        borderWidth: 1,
-      },
-    ],
+        borderWidth: 1
+      }
+    ]
   });
   useEffect(() => {
     setdata2({
@@ -94,17 +94,17 @@ function ProfuctsStatic2() {
             "rgba(25, 206, 86, 1)",
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
+            "rgba(255, 206, 86, 0.2)"
           ],
           borderColor: [
             "rgba(25, 206, 86, 1)",
             "rgba(255, 99, 132, 1)",
             "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
+            "rgba(255, 206, 86, 1)"
           ],
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     });
   }, [dataPrice]);
   const language = useSelector((state) => state.language.lang);

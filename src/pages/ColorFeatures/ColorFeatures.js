@@ -26,28 +26,28 @@ const ColorFeatures = () => {
   const language = useSelector((state) => state.language.lang);
   const [addobj, setaddobj] = useState({
     label: "",
-    label_ar: "",
+    label_ar: ""
   });
   const [delitemobj, setdelitemobj] = useState({
     loading: false,
-    prop_id: "",
+    prop_id: ""
   });
   const [addloading, setaddloading] = useState(false);
   const columns = [
     {
       title: language == "ar" ? "*" : "id",
       dataIndex: "id",
-      key: "id",
+      key: "id"
     },
     {
       title: language == "ar" ? "إسم الخاصيه بالانجليزيه" : "label In English",
       dataIndex: "label",
-      key: "label",
+      key: "label"
     },
     {
       title: language == "ar" ? "إسم الخاصيه بالعربيه" : "label In Arabic",
       dataIndex: "label_ar",
-      key: "label_ar",
+      key: "label_ar"
     },
     {
       title: language == "ar" ? "قيم الخواص" : "Properties Values",
@@ -63,8 +63,8 @@ const ColorFeatures = () => {
             الخواص
           </button>
         );
-      },
-    },
+      }
+    }
     // {
     //   title:language=='ar'?"أوامر":"action",
     //   key:'action',
@@ -103,7 +103,7 @@ const ColorFeatures = () => {
   ];
   const handledeleteprop = (id) => {
     const data_send = {
-      prop_id: id,
+      prop_id: id
     };
     // console.log(data_send)
     axios
@@ -122,13 +122,13 @@ const ColorFeatures = () => {
       .finally(() => {
         setdelitemobj({
           loading: false,
-          prop_id: "",
+          prop_id: ""
         });
       });
   };
   const getcolorfeatrues = () => {
     const data_send = {
-      color_id: record.id,
+      color_id: record.id
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/get_value", data_send)
@@ -149,7 +149,7 @@ const ColorFeatures = () => {
     setaddloading(true);
     const data_send = {
       ...addobj,
-      color_id: record.id,
+      color_id: record.id
     };
     axios
       .post("https://api.manjam.shop/v3/color_props/add", data_send)
@@ -175,7 +175,7 @@ const ColorFeatures = () => {
     const data_send = {
       label: recorddata.label,
       label_ar: recorddata.label_ar,
-      prop_id: recorddata.id,
+      prop_id: recorddata.id
     };
     // console.log(data_send)
     axios
@@ -238,7 +238,7 @@ const ColorFeatures = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <h4>{language == "ar" ? "إضافه" : "add"}</h4>
@@ -261,7 +261,7 @@ const ColorFeatures = () => {
                 borderRadius: "10px",
                 border: "1px solid #ccc",
                 margin: "10px auto",
-                outline: "none",
+                outline: "none"
               }}
               onChange={(e) => {
                 searchType(e.target.value);
@@ -367,7 +367,7 @@ const ColorFeatures = () => {
                     onChange={(e) => {
                       setrecorddata({
                         ...recorddata,
-                        label_ar: e.target.value,
+                        label_ar: e.target.value
                       });
                     }}
                     type="text"
