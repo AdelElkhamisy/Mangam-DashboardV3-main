@@ -1,0 +1,22 @@
+.heading-d {
+  color: var(--style, #1f1f1f);
+  /* text-align: right; */
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.date-d {
+  display: flex;
+  gap: 29px;
+  flex-direction: row;
+  margin-top: 18px;
+}
+
+.date-d>* {
+  display: flex;
+  flex-direction: row;
+  width: fit-content !important;
+  gap: 6px;
+}

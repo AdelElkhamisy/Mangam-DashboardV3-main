@@ -1,0 +1,20 @@
+#filter {
+  display: inline-flex;
+  padding: 16px 20px 20px 20px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--gray-300, #d0d5dd);
+  background: var(--base-white, #fff);
+  width: min(300px, 100%);
+  gap: 15px;
+}
+
+#filterForm {
+  display: flex;
+  margin: 12px 0;
+  flex-direction: column;
+  padding: 22px;
+  gap: 15px;
+}

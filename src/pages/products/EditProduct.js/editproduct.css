@@ -1,0 +1,38 @@
+.color_images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.color_img {
+  width: 100px;
+  position: relative;
+}
+
+.color_img img {
+  width: 100%;
+}
+
+.color_img .img_rem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  /* padding: 10px; */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.colform {
+  /* min-height: fit-content !important; */
+}

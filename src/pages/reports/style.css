@@ -1,0 +1,282 @@
+.OrderModel .items h3 {
+  text-align: center;
+  width: fit-content;
+  padding: 10px 15px;
+  border-bottom: 0.1px solid rgb(217, 217, 217);
+  margin: 10px auto;
+}
+
+.OrderModel .items h2 {
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  padding: 10px 15px;
+}
+
+.OrderModel {
+  padding: 12px;
+  width: min(400px, 100%);
+  width: 80%;
+  position: fixed;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 9999999999999999999 !important;
+  top: 0;
+  left: 43%;
+  translate: -50%;
+  background: white;
+  box-shadow: 1px 0 24px -2px rgb(217, 217, 217);
+  border-radius: 4px;
+}
+
+.table_btns button {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.table_btns {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+#order-status-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  width: 264px;
+  margin: 7px 0;
+}
+
+#order-status-form label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#order-status-form input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#order-status-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#order-status-form input {
+  display: none !important;
+}
+
+#order-status-form input:checked+span {
+  background: rgb(85, 16, 16);
+  color: white;
+}
+
+.edit_model {
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  top: -20%;
+  background: white;
+  box-shadow: 1px 0px 24px -3px rgb(204, 204, 204);
+  border-radius: 5px;
+  transform: translate(50%, 50%);
+}
+
+@media print {
+  body {
+    margin: 0;
+    overflow: hidden;
+    /* overflow-y: auto !important; */
+  }
+
+  .printable {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .OrderModel .items h3 {
+    text-align: center;
+    width: fit-content;
+    padding: 10px 15px;
+    border-bottom: 0.1px solid rgb(217, 217, 217);
+    margin: 10px auto;
+  }
+
+  .OrderModel .items h2 {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 15px;
+  }
+
+  .OrderModel {
+    padding: 12px;
+    width: min(400px, 100%);
+    width: 80%;
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999 !important;
+    top: 0;
+    left: 43%;
+    translate: -50%;
+    background: white;
+    box-shadow: 1px 0 24px -2px rgb(217, 217, 217);
+    border-radius: 4px;
+  }
+
+  .table_btns button {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .table_btns {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  #order-status-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+    width: 264px;
+    margin: 7px 0;
+  }
+
+  #order-status-form label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  #order-status-form input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #order-status-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  #order-status-form input {
+    display: none !important;
+  }
+
+  #order-status-form input:checked+span {
+    background: rgb(85, 16, 16);
+    color: white;
+  }
+
+  .edit_model {
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: -10%;
+    background: white;
+    box-shadow: 1px 0px 24px -3px rgb(204, 204, 204);
+    border-radius: 5px;
+  }
+}
+
+.en .edit_model {
+  left: 40%;
+}
+
+.filteration {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#root>div>div.productdetails_page>div.buy_div>div.buy>button {
+  margin-left: auto;
+}
+
+
+.edit_model {
+  padding: 10px !important;
+  position: fixed !important;
+  left: 50% !important;
+  top: 0 !important;
+  translate: -50% !important;
+  background: white;
+  box-shadow: 1px 0px 24px -3px rgb(204, 204, 204);
+  border-radius: 5px;
+  transform: none !important;
+}
+
+.copy_modal,
+.add_model {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  translate: -50% -50% !important;
+}
+
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-1bn53lx {
+  padding: 10px !important;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-1bn53lx input {
+  width: 100% !important;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-1bn53lx>div {
+  width: fit-content !important;
+}
+
+.confstop {
+
+  box-shadow: 0 1px 4px rgb(0 0 0 / 78%) !important;
+
+  width: min(500px, 100%) !important;
+  font-size: 20px !important;
+}
+
+.confstop button {
+  font-size: 20px !important;
+  min-width: 120px !important;
+} 
+
+span.imgSpan img {
+  width: 100% !important;
+}
+
+.menu-down button {
+  width: 100% !important;
+}

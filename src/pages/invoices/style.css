@@ -1,0 +1,71 @@
+.Invoices_filter {
+  box-shadow: 0px 0px 17px 0px #b5b5b538;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.Invoices_filter_week {
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.invoices_switech .s_fl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.invoices_switech .s_fl button {
+  width: fit-content;
+}
+
+.invoices {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+
+.invoices .invoice {
+  width: min(240px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dadada;
+  padding: 30px 20px;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.invoice .invoice_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+
+.invoice_actions > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.invoice_actions .show {
+  color: #068c45;
+}
+
+.invoice_actions .delete {
+  color: #ce2029;
+}

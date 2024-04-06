@@ -1,0 +1,17 @@
+.authFunction {
+  width: min(400px, 100%);
+  height: fit-content;
+  background: white;
+  box-shadow: 1px 0px 24px -2px rgb(217, 217, 217);
+  padding: 14px;
+  border-radius: 5px;
+}
+
+.authContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}

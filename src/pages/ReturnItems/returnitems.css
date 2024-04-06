@@ -1,0 +1,58 @@
+.itemstatus {
+  width: fit-content;
+  border-radius: 4px;
+}
+
+.itemstatus.pending {
+  background-color: rgba(243, 243, 2, 0.721);
+  padding: 4px;
+  text-transform: capitalize;
+}
+
+.itemstatus.approved {
+  background-color: rgba(243, 243, 2, 0.721);
+  padding: 4px;
+  text-transform: capitalize;
+}
+
+.itemstatus.rejected {
+  color: #CD0F0F;
+  background-color: #E0A09D;
+  padding: 4px;
+}
+
+.itemstatus.approved {
+  color: #008000;
+  background-color: #A5EE92;
+  padding: 4px;
+}
+
+.itemstatus.underchacking {
+  color: #29C303;
+  background-color: #A5EE92;
+  padding: 4px;
+}
+
+.filterdate {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filterdate>div {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width:767px) {
+  .filterdate div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+#underchacking {
+  background-color: #29C303;
+}

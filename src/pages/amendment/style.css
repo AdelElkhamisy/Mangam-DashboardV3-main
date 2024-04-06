@@ -1,0 +1,12 @@
+.site-content>div {
+  padding: 46px 30px 4px 4px;
+  width: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width:767px) {
+  .site-content>div {
+    width: 100%;
+  }
+}

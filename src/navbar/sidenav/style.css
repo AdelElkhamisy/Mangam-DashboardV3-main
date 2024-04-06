@@ -1,0 +1,92 @@
+aside a em {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  /* font-weight: 300; */
+  line-height: 20px;
+  color: black;
+}
+
+aside a svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+aside a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  gap: 6px;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  padding: 0 17px;
+}
+aside a.active {
+  background: #d8ffe0;
+  padding: 13.4px 17px;
+}
+/* background: #D8FFE0; */
+aside {
+  width: 330px;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--edfff-1, #edfff1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 30px 70px 19px 0;
+  position: sticky;
+  top: 0;
+}
+
+aside .logo-ic img {
+  width: 56.573px;
+  /* height: 129.573px; */
+  flex-shrink: 0;
+  margin: 30px auto;
+  /* border-radius: 165px; */
+}
+
+aside .logo-ic {
+  margin: 0 auto;
+}
+
+aside .links {
+  /* padding: 20px; */
+  width: 100%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.side {
+  position: sticky !important;
+  top: 0;
+  height: 100vh;
+}
+
+aside::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+aside::-webkit-scrollbar {
+  width: 0;
+  background-color: #f7f7f7;
+  transition: .5s ease-in-out;
+}
+
+aside:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #bfbfbf;
+}

@@ -1,0 +1,7 @@
+.container-m {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}

@@ -1,0 +1,55 @@
+form.formTypeTwo textarea {
+  width: 460px;
+  padding: 18px 10px !important;
+  height: 100px;
+}
+
+form.formTypeTwo button {
+  width: fit-content;
+}
+form.formTypeTwo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.filefield label {
+  width: 100%;
+  text-align: center;
+}
+
+form.formTypeTwo .inputField {
+  width: 270px;
+  justify-content: center;
+  /* align-items: center; */
+  margin-bottom: 0;
+}
+
+form.formTypeTwo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form.formTypeTwo .filefield {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 18px 10px !important;
+}
+
+.inputfieldtypetwo label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+form.formTypeTwo .filefield {
+  padding: 18px 10px !important;
+  height: 100px !important;
+  font-size: 16px !important;
+}

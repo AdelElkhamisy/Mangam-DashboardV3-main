@@ -1,0 +1,41 @@
+.add_item svg {
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.from_Shipping {
+  overflow-y: auto !important;
+}
+
+.from_Shipping_div_edit {
+  height: 700px;
+}
+
+.editimgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.editimgs div {
+  width: 100px;
+  max-width: 100%;
+  position: relative;
+}
+
+.editimgs div img {
+  width: 100%;
+}
+
+.editimgs div svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}

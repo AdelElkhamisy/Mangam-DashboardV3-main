@@ -1,0 +1,41 @@
+.common-cl {
+  padding: 17px;
+  max-width: 100%;
+}
+
+.s_fl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px;
+}
+
+.btn-switch {
+  min-width: 180px;
+  padding: 10px 14px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--edfff-1, #edfff1);
+  margin: 6px 0;
+  border: 0;
+  outline: 0;
+  font-weight: 700;
+}
+
+.btn-switch.active {
+  background: var(--068-c-45, #068c45);
+  color: white;
+}
+
+.s_fl .filter .filter_head {
+  cursor: pointer;
+}
+
+.switches_btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}

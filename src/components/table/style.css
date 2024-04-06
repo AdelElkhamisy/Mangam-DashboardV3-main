@@ -1,0 +1,85 @@
+.table-t {
+  min-width: 100%;
+  margin: 34px 0;
+  box-shadow: 1px 0 24px -2px rgb(217 217 217 / 72%);
+  border-radius: 10px;
+  /* overflow-y: auto; */
+}
+
+.table-tc {
+  width: fit-content !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+table thead th,
+table tbody td {
+  border: 2px solid rgba(181, 181, 181, 0.22);
+  padding: 18px;
+  width: 20%;
+  text-align: center;
+}
+
+.childs {
+  /* padding-left: 47px; */
+}
+
+#pending,
+#delivered,
+#completed,
+#canceled,
+#onWay,
+#underchacking,
+#out_for_delivery,
+#Return_Confirmed {
+  display: inline-flex;
+  padding: 2.634px 19.752px;
+  align-items: flex-start;
+  gap: 13.168px;
+  border-radius: 10.534px;
+  background: rgba(245, 126, 119, 0.12);
+}
+
+#delivered {
+  background: #008000;
+  color: white;
+}
+
+#completed {
+  background: #00bfff;
+}
+
+#pending {
+  background: #ffa500;
+}
+
+#onWay {
+  background: #1e90ff;
+}
+
+#out_for_delivery {
+  background-color: red;
+  color: white;
+}
+
+#Return_Confirmed {
+  background-color: #008000;
+  color: white;
+}
+
+tr#noData span {
+  width: 100%;
+  padding: 20px;
+  display: block;
+  margin: auto;
+  font-size: 22px;
+}
+
+td a {
+  text-decoration: none;
+  color: black;
+}

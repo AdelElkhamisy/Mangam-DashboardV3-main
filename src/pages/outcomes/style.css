@@ -1,0 +1,8 @@
+.outcometabel table {
+  width: 100%;
+}
+
+.outcometabel table tr td {
+  width: 33%;
+  padding: 30px;
+}

@@ -1,0 +1,170 @@
+.ratios_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+  /* width: 97%; */
+}
+
+.table-pc {
+  overflow: auto;
+}
+
+.ratios_page .ratio_cat {
+  width: 24%;
+  padding: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 40px; */
+  border-radius: 10px;
+  gap: 10px;
+  box-shadow: 0px 0px 17px 0px #B5B5B538;
+}
+
+.ratios_page .ratio_cat>p {
+  margin: 0px;
+}
+
+.ratios_page .ratio_cat>p:last-of-type {
+  color: #068C45;
+}
+
+.filter_page {
+  box-shadow: 0px 0px 17px 0px #B5B5B538;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 96%; */
+  /* width: 96.4%; */
+}
+
+.filter_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter_page .filter_right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.filter_cat,
+.date_filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+table {
+  font-size: 15px;
+}
+
+.filter_cat>h5,
+.date_filter>h5 {
+  color: #CE2029;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter_cat .choose_filter>svg,
+.date_filter .choose_filter>svg,
+.weak_filter .choose_filter>svg {
+  font-size: 30px;
+}
+
+.weak_filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.products_table table tbody tr td {
+  padding: 25px;
+}
+
+
+.showproductoffer {
+  position: fixed;
+  border: 2px solid rgba(181, 181, 181, 0.22);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: white;
+  width: 500px;
+  max-width: 100%;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.showproductoffer span {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  color: red;
+  z-index: 999999999999999999999;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.status.show {
+  background-color: #068C45;
+  color: white;
+}
+
+.status.hidden {
+  background-color: #CE2029;
+  color: white;
+}
+
+.status.pending {
+  background-color: rgba(243, 243, 2, 0.721);
+  padding: 4px;
+  text-transform: capitalize;
+}
+
+.status.rejected {
+  background-color: #CE2029;
+  padding: 4px;
+  text-transform: capitalize;
+  color: white;
+}
+
+.ant-table-wrapper {
+  overflow-x: auto !important;
+}
+
+.status.on_way {
+  background-color: #0d6efd;
+  color: white;
+  padding: 4px;
+}
+
+.editproduct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: fit-content;
+  display: flex;
+  height: 700px;
+}
+
+.edpro {
+  min-height: fit-content;
+}
+
+.edpro textarea {
+  height: 100px !important;
+}
